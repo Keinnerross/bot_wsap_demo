@@ -1,64 +1,109 @@
+///BubolFresa
+
+//Imports
 const { addKeyword, addAnswer } = require('@bot-whatsapp/bot');
-
-
 const menu = require('../flowsData/menuData.js');
 const adicionales = require('../flowsData/adicionales.js');
-const menuChossed = menu[1 - 1];
+const { delay } = require('@whiskeysockets/baileys');
 
 
-///TRADICIONALES
+//variables
+const bodyEntry = 2; // entrada del usuario, es decir, la opción que elige.
+const menuChossed = menu[bodyEntry - 1];
 
 
 
-const unToppingUnaSalsa = addKeyword("1").addAnswer([`${menuChossed.producto} es una buena elección!`,
+const salsas = [
+    "Leche Condensada",
+    "Arequipe",
+    "Chocolate Blanco",
+    "Chocolate Negro",
+]
+
+
+
+
+
+
+const unToppingUnaSalsa = addKeyword(bodyEntry.toString()).addAnswer([`${menuChossed.producto} es una buena elección!`,
     "",
-    "Escoje una *salsa*",
+    "Escoje una *salsa* gratis",
     "",
-    "1️⃣ Leche condensada",
-    "2️⃣ Arequipe",
-    "3️⃣ Leche condensada + Arequipe ($3000) Adicional"],
+...salsas.map((salsa, index) => `*${index + 1}️.-* ${salsa}`)],
     {
         capture: true,
     },
     async (ctx, { flowDynamic, state, fallBack }) => {
 
-        const salsas = {
-            1: "Leche condensada",
-            2: "Arequipe",
-            3: "Leche condensada + Arequipe +$3000 Adicional",
 
-        };
 
         //Guarda producto seleccionado y el precio en la cuenta del flujo anterior por ahora manual
         await state.update({ producto: menuChossed.producto });
         await state.update({ cuenta: menuChossed.precio });
 
 
-        if (salsas[ctx.body]) {
-            await state.update({ salsa: salsas[ctx.body] }); // Guarda salsa seleccionada
 
-            if (ctx.body == 3) {
-                const myState = state.getMyState();
-                cuentaActual = myState.cuenta
-                await state.update({ cuenta: cuentaActual + 3000 }); //Si es que la salsa tiene costo extra hace la suma
+        if (salsas[ctx.body - 1]) {
 
-            }
+            await state.update({ salsa: salsas[ctx.body - 1] }); // Guarda salsa seleccionada
+
             const myState = state.getMyState();
-            console.log(myState.cuenta);
             await flowDynamic([
                 `${myState.salsa} buena elección!!`,
             ]);
-            await flowDynamic([
-                {
-                    media: 'https://randomqr.com/assets/images/randomqr-256.png',
-                }
-            ]);
+
         } else {
             return fallBack();
         }
 
     }
-).addAnswer(["*Adicionales:*",
+).addAnswer(["Escoje una *segunda salsa* gratis"],
+    {
+        capture: true,
+    },
+    async (ctx, { flowDynamic, state, fallBack }) => {
+
+
+
+        if (salsas[ctx.body - 1]) {
+            const myStateBefore = state.getMyState();
+
+            const currentSalsa = myStateBefore.salsa
+            await state.update({ salsa: currentSalsa + ", " + salsas[ctx.body - 1] }); // Guarda salsa seleccionada
+
+            const myStateAfter = state.getMyState();
+
+            await flowDynamic([
+                `Salsas elegidas: ${myStateAfter.salsa}`,
+            ]);
+
+        } else {
+            return fallBack();
+        }
+
+    }
+).addAnswer(["Escoge un Topping:",
+    ...adicionales.toppingsClasicos.map((item, index) => `*${index + 1}️.-* ${item.topping}`),
+], {
+    capture: true
+}, async (ctx, { flowDynamic, state, fallBack }) => {
+
+
+    if (ctx.body >= 1 && ctx.body <= adicionales.toppingsClasicos.length) {
+        const toppingChoosed = adicionales.toppingsClasicos[ctx.body - 1].topping;
+
+        await state.update({ topping: toppingChoosed }); // Guarda salsa seleccionada
+        const myState = state.getMyState();
+
+
+        await flowDynamic(`${myState.topping} ¡Genial!`)
+    } else {
+        return fallBack();
+    }
+
+
+
+}).addAnswer(["*Adicionales:*",
     "¿Quieres mas salsas o toppings por un costo adicional?",
     "",
     "*Salsas:*",
@@ -78,10 +123,11 @@ const unToppingUnaSalsa = addKeyword("1").addAnswer([`${menuChossed.producto} es
 
 ], {
     capture: true,
+    delay: 1500,
 }, async (ctx, { flowDynamic, state, fallBack }) => {
 
     //ctx.body <= 4 Quiere decir que eligió como adicional salsas
-    if (ctx.body >= 1 && ctx.body <= 4  ) {
+    if (ctx.body >= 1 && ctx.body <= 4) {
         const myState = state.getMyState();
         const cuentaActual = myState.cuenta;
         const adicionalChossed = adicionales.salsas[ctx.body - 1]; // hacemos a resta pq estamos filtrando por indice no por lenght y el usuario escribe numeros desde le 1

@@ -176,7 +176,7 @@ const chocolate = addKeyword("5").addAnswer([`${menuChossed.producto} es una bue
                 const myState = state.getMyState();
                 await flowDynamic([`Forma de pago: ${myState.pago}`]);
 
-          
+
             } else if (ctx.body == 3) {
                 await state.update({ pago: metodoPago[ctx.body] });
                 const myState = state.getMyState();
