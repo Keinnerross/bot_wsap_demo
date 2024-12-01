@@ -3,14 +3,12 @@ const { addKeyword, addAnswer } = require('@bot-whatsapp/bot');
 
 const menu = require('../flowsData/menuData.js');
 const adicionales = require('../flowsData/adicionales.js');
-const menuChossed = menu[0];
+const menuChossed = menu[4 - 1];
 
 
+///CREMA Y DURAZNOS
 
-const flowThanks = addKeyword("gracias").addAnswer("Estoy aquí para ayudarte 🦁")
-
-
-const cremaDuraznos = addKeyword("1").addAnswer([`${menuChossed.producto} es una buena elección!`,
+const cremaDuraznos = addKeyword("4").addAnswer([`${menuChossed.producto} es una buena elección!`,
     "",
     "Escoje una *salsa*",
     "",

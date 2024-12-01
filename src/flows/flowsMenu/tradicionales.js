@@ -3,11 +3,11 @@ const { addKeyword, addAnswer } = require('@bot-whatsapp/bot');
 
 const menu = require('../flowsData/menuData.js');
 const adicionales = require('../flowsData/adicionales.js');
-const menuChossed = menu[0];
+const menuChossed = menu[1 - 1];
 
 
+///TRADICIONALES
 
-const flowThanks = addKeyword("gracias").addAnswer("Estoy aquí para ayudarte 🦁")
 
 
 const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una buena elección!`,
@@ -111,12 +111,12 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
 
 
 
-    } 
+    }
     else if (ctx.body > 15 && ctx.body <= 24) {
         const myState = state.getMyState();
         const cuentaActual = myState.cuenta;
         const adicionalChossed = adicionales.toppingsPremiums[ctx.body - 16]; // hacemos a resta pq estamos filtrando por indice no por 
-       
+
 
         await state.update({ adicional: adicionalChossed.topping }); // Guarda topping seleccionada
         await state.update({ cuenta: cuentaActual + 4000 }); //Si es que la topping tiene costo extra hace la suma

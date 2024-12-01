@@ -12,7 +12,7 @@ const menu = [
         precio: 21500,
     },
     {
-        producto: "Fresas con crema y durazno: $18.000",
+        producto: "Fresas con crema y durazno",
         precio: 18000,
     },
     {
