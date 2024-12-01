@@ -7,6 +7,7 @@ const cremaDuraznos = require('./flowsMenu/CremaDuraznos.js');
 const chocolate = require('./flowsMenu/chocolate.js');
 const bubolFresa = require('./flowsMenu/bubolFresa');
 const unToppingUnaSalsa = require('./flowsMenu/unToppingUnaSalsa');
+const dosToppingsUnaSalsa = require('./flowsMenu/dosToppingsUnaSalsa.js');
 
 
 const flowWelcome = addKeyword(["hola", "holis", "hoa", "buenas tardes", "buenos dias", "buenas", "buenas noches", "alo", "cotizar", "hola...", "buen", "buenas"])
@@ -17,7 +18,7 @@ const flowWelcome = addKeyword(["hola", "holis", "hoa", "buenas tardes", "buenos
         ...menu.map((item, index) => `*${index + 1}️⃣* ${item.producto} - $${item.precio.toLocaleString()}`)
     ], {
         delay: 1500
-    }, null, [tradicionales, cremaDuraznos, chocolate, bubolFresa, unToppingUnaSalsa]);
+    }, null, [tradicionales, cremaDuraznos, chocolate, bubolFresa, unToppingUnaSalsa, dosToppingsUnaSalsa]);
 
 
 
