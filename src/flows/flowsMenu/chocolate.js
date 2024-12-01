@@ -3,22 +3,21 @@ const { addKeyword, addAnswer } = require('@bot-whatsapp/bot');
 ///CREMA Y DURAZNOS
 const menu = require('../flowsData/menuData.js');
 const adicionales = require('../flowsData/adicionales.js');
-const menuChossed = menu[4 - 1];
+const menuChossed = menu[5 - 1];
 
 
 
 const salsas = [
-    "Leche condensada",
-    "Arequipe",
     "Chocolate Blanco",
-    "Chocolate Negro"
+    "Chocolate Negro",
+    "Combinado"
 ]
 
 
 
 
 
-const cremaDuraznos = addKeyword("4").addAnswer([`${menuChossed.producto} es una buena elección!`,
+const chocolate = addKeyword("5").addAnswer([`${menuChossed.producto} es una buena elección!`,
     "",
     "Escoje una *salsa gratis*",
     "",
@@ -49,7 +48,7 @@ const cremaDuraznos = addKeyword("4").addAnswer([`${menuChossed.producto} es una
         "",
         "*Toppings Clasicos: $3.000*",
         //El valor del 5 es definido por la cantidad de salsas que hay es decir salsa.lenght, ahora es manual.
-        
+
         ...adicionales.toppingsClasicos.map((item, index) => `*${index + 5}️.-* ${item.topping}`),
         "",
         "*Toppings Premium: $4.000*",
@@ -160,7 +159,7 @@ const cremaDuraznos = addKeyword("4").addAnswer([`${menuChossed.producto} es una
 
             const metodoPago = {
                 1: "Efectivo",
-                2: "Nequi: 3006723128",
+                2: "Nequi 3006723128",
                 3: "QR",
 
             };
@@ -175,9 +174,9 @@ const cremaDuraznos = addKeyword("4").addAnswer([`${menuChossed.producto} es una
             } else if (ctx.body == 2) {
                 await state.update({ pago: metodoPago[ctx.body] });
                 const myState = state.getMyState();
-                await flowDynamic([`Forma de pago: ${myState.pago}, Por favor envianos el comprobante`,
+                await flowDynamic([`Forma de pago: ${myState.pago}`]);
 
-                ]);
+          
             } else if (ctx.body == 3) {
                 await state.update({ pago: metodoPago[ctx.body] });
                 const myState = state.getMyState();
@@ -201,6 +200,6 @@ const cremaDuraznos = addKeyword("4").addAnswer([`${menuChossed.producto} es una
 
 
 
-module.exports = cremaDuraznos;
+module.exports = chocolate;
 
 

@@ -10,7 +10,7 @@ const menuChossed = menu[1 - 1];
 
 
 
-const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una buena elección!`,
+const unToppingUnaSalsa = addKeyword("1").addAnswer([`${menuChossed.producto} es una buena elección!`,
     "",
     "Escoje una *salsa*",
     "",
@@ -218,6 +218,6 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
 
 
 
-module.exports = tradicionales;
+module.exports = unToppingUnaSalsa;
 
 
