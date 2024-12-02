@@ -1,3 +1,4 @@
+// firebase.js
 require('dotenv').config(); // Carga el archivo .env
 const admin = require('firebase-admin');
 const path = require('path');
@@ -20,10 +21,12 @@ if (!fs.existsSync(serviceAccountPath)) {
 
 const serviceAccount = require(serviceAccountPath);
 
+// Inicializa Firebase Admin con las credenciales de la cuenta de servicio
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
 });
 
 const db = admin.firestore();
 
-module.exports = db;
+// Exporta tanto el objeto admin (para autenticación) como db (para Firestore)
+module.exports =  db;

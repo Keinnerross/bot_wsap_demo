@@ -1,10 +1,7 @@
 const { addKeyword, addAnswer } = require('@bot-whatsapp/bot');
-
-
 const menu = require('../flowsData/menuData.js');
 const adicionales = require('../flowsData/adicionales.js');
 const menuChossed = menu[1 - 1];
-
 const db = require('../../firebase.js');
 
 
@@ -229,11 +226,10 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
             metodoPago: myState.metodoPago,
             comprobante: myState.comprobante,
             fecha: formatDate(new Date()),  // Usa la función para formatear la fecha
-            estado: "Recibido",
+            estado: "En proceso",
             total: `$${myState.cuenta.toLocaleString()}`,
         };
 
-        // Función para enviar el pedido como objeto a Firestore
         async function enviarPedido() {
             const docRef = db.collection('pedidos').doc();  // Crea un documento con ID autogenerado
             await docRef.set(pedido);  // Envía el objeto como documento
@@ -241,8 +237,11 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
             console.log('Pedido enviado a la base de datos.');
         }
 
-        // Llamar a la función para enviar el pedido
         enviarPedido();
+
+
+        
+
 
     },)
     .addAnswer("🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨", {

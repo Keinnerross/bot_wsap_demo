@@ -17,12 +17,16 @@
         "@bot-whatsapp/portal": "latest",
         "@bot-whatsapp/provider": "latest",
         "@whiskeysockets/baileys": "6.5.0",
+        "autoprefixer": "^10.4.20",
         "cache-manager": "5.2.4",
         "dotenv": "^16.4.5",
         "express": "^4.21.1",
         "firebase-admin": "^13.0.1",
         "mime-types": "2.1.35",
+        "postcss": "^8.4.49",
+        "pug": "^3.0.3",
         "socket.io": "^4.8.1",
+        "tailwindcss": "^3.4.15",
         "wa-sticker-formatter": "4.4.4"
     },
     "devDependencies": {

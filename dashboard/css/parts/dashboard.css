@@ -1,0 +1,36 @@
+.dashboard{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.dashboard-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+}
+
+
+.dashboard-header{
+    width: 100%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+
+.dashboard-list{
+    width: 100%;
+    min-height: 300px;
+    background-color: white;
+    border-radius: 25px;
+
+}
+
+#orders-list li{
+    padding: 25px;
+    border-top: 1px lightgray solid;
+    border-bottom: 1px lightgray solid;
+}

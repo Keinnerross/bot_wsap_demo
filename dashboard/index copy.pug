@@ -1,0 +1,20 @@
+// dashboard.pug
+doctype html
+html
+  head
+    title Dashboard
+    meta(charset="UTF-8")
+    script(src="https://cdn.socket.io/4.0.0/socket.io.min.js") 
+    script(src="./js/login.js") 
+    link(rel="stylesheet" href="./css/parts/login.css")
+    link(rel="stylesheet" href="./css/parts/dashboard.css")
+    link(rel="stylesheet" href="./css/main.css")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css")
+    script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.js")
+  body
+    .main-container
+    .dashboard-container(id="dashboardContainer" style="display:none;")
+            include parts/dashboard.pug
+      .login-container(id="loginContainer" style="display:none;")
+        include parts/login.pug
