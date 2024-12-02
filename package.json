@@ -18,7 +18,9 @@
         "@bot-whatsapp/provider": "latest",
         "@whiskeysockets/baileys": "6.5.0",
         "cache-manager": "5.2.4",
+        "dotenv": "^16.4.5",
         "express": "^4.21.1",
+        "firebase-admin": "^13.0.1",
         "mime-types": "2.1.35",
         "socket.io": "^4.8.1",
         "wa-sticker-formatter": "4.4.4"

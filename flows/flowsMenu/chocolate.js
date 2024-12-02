@@ -21,7 +21,7 @@ const chocolate = addKeyword("5").addAnswer([`${menuChossed.producto} es una bue
     "",
     "Escoje una *salsa gratis*",
     "",
-...salsas.map((salsa, index) => `*${index + 1}️.-* ${salsa}`)
+...salsas.map((salsa, index) => `${index + 1}\u20E3 ${salsa}`)
 ],
     {
         capture: true,
@@ -44,17 +44,16 @@ const chocolate = addKeyword("5").addAnswer([`${menuChossed.producto} es una bue
         "¿Quieres mas salsas o toppings por un costo adicional?",
         "",
         "*Salsas:*",
-        ...adicionales.salsas.map((item, index) => `*${index + 1}️.-* ${item.salsa} - $${item.precio.toLocaleString()}`),
+        ...adicionales.salsas.map((item, index) => `${index + 1}️.- ${item.salsa} - $${item.precio.toLocaleString()}`),
         "",
-        "*Toppings Clasicos: $3.000*",
+        "*Toppings clasicos: $3.000*",
         //El valor del 5 es definido por la cantidad de salsas que hay es decir salsa.lenght, ahora es manual.
-
-        ...adicionales.toppingsClasicos.map((item, index) => `*${index + 5}️.-* ${item.topping}`),
+        ...adicionales.toppingsClasicos.map((item, index) => `${index + 5}️.- ${item.topping}`),
         "",
         "*Toppings Premium: $4.000*",
-        ...adicionales.toppingsPremiums.map((item, index) => `*${index + 16}️.-* ${item.topping}`),
+        ...adicionales.toppingsPremiums.map((item, index) => `${index + 16}️.- ${item.topping}`),
         "",
-        "*0.-* No gracias",
+        "0.- No gracias",
 
 
 

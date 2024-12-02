@@ -14,7 +14,7 @@ const menuChossed = menu[bodyEntry - 1];
 
 
 const bubolFresa = addKeyword(bodyEntry.toString()).addAnswer([`${menuChossed.producto} es una buena elección!`], null,
-    async (ctx, { flowDynamic, state}) => {
+    async (ctx, { flowDynamic, state }) => {
 
 
         await state.update({ producto: menuChossed.producto });

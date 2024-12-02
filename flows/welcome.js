@@ -3,7 +3,7 @@ const { addKeyword } = require('@bot-whatsapp/bot');
 
 const menu = require('./flowsData/menuData.js');
 const tradicionales = require('./flowsMenu/tradicionales.js');
-const cremaDuraznos = require('./flowsMenu/CremaDuraznos.js');
+const cremaDuraznos = require('./flowsMenu/cremaDuraznos.js');
 const chocolate = require('./flowsMenu/chocolate.js');
 const bubolFresa = require('./flowsMenu/bubolFresa');
 const unToppingUnaSalsa = require('./flowsMenu/unToppingUnaSalsa');

@@ -17,7 +17,7 @@ const HTTP_PORT = process.env.PORT || 3000;
 const QR_FILE = process.env.QR_FILE ?? 'bot';
 const PUBLIC_URL = process.env.PUBLIC_URL ?? process.env.RAILWAY_STATIC_URL ?? 'http://localhost';
 
-const dir = [join(__dirname, 'public'), join(__dirname, '..', 'public')].find((i) => existsSync(i));
+const dir = [join(__dirname, 'dist'), join(__dirname, '..', 'dist')].find((i) => existsSync(i));
 const serve = require$$4(dir);
 
 const start = (args) => {
@@ -51,8 +51,8 @@ const start = (args) => {
                 ].find((i) => existsSync(i));
 
                 const qrMark = [
-                    join(__dirname, 'public', 'water-mark.png'),
-                    join(__dirname, '..', 'public', 'water-mark.png'),
+                    join(__dirname, 'dist', 'water-mark.png'),
+                    join(__dirname, '..', 'dist', 'water-mark.png'),
                 ].find((i) => existsSync(i));
                 const fileStream = createReadStream(qrSource ?? qrMark);
 

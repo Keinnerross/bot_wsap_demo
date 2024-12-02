@@ -5,6 +5,9 @@ const menu = require('../flowsData/menuData.js');
 const adicionales = require('../flowsData/adicionales.js');
 const menuChossed = menu[1 - 1];
 
+const db = require('../../firebase.js');
+
+
 
 ///TRADICIONALES
 
@@ -48,11 +51,7 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
             await flowDynamic([
                 `${myState.salsa} buena elección!!`,
             ]);
-            await flowDynamic([
-                {
-                    media: 'https://randomqr.com/assets/images/randomqr-256.png',
-                }
-            ]);
+
         } else {
             return fallBack();
         }
@@ -62,17 +61,16 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
     "¿Quieres mas salsas o toppings por un costo adicional?",
     "",
     "*Salsas:*",
-    ...adicionales.salsas.map((item, index) => `*${index + 1}️.-* ${item.salsa} - $${item.precio.toLocaleString()}`),
+    ...adicionales.salsas.map((item, index) => `${index + 1}️.- ${item.salsa} - $${item.precio.toLocaleString()}`),
     "",
-    "*Toppings:*",
+    "*Toppings clasicos: $3.000*",
     //El valor del 5 es definido por la cantidad de salsas que hay es decir salsa.lenght, ahora es manual.
-    "Clasicos: $3.000",
-    ...adicionales.toppingsClasicos.map((item, index) => `*${index + 5}️.-* ${item.topping}`),
+    ...adicionales.toppingsClasicos.map((item, index) => `${index + 5}️.- ${item.topping}`),
     "",
-    "Premium: $4.000",
-    ...adicionales.toppingsPremiums.map((item, index) => `*${index + 16}️.-* ${item.topping}`),
+    "*Toppings Premium: $4.000*",
+    ...adicionales.toppingsPremiums.map((item, index) => `${index + 16}️.- ${item.topping}`),
     "",
-    "*0.-* No gracias",
+    "0.- No gracias",
 
 
 
@@ -81,7 +79,7 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
 }, async (ctx, { flowDynamic, state, fallBack }) => {
 
     //ctx.body <= 4 Quiere decir que eligió como adicional salsas
-    if (ctx.body >= 1 && ctx.body <= 4  ) {
+    if (ctx.body >= 1 && ctx.body <= 4) {
         const myState = state.getMyState();
         const cuentaActual = myState.cuenta;
         const adicionalChossed = adicionales.salsas[ctx.body - 1]; // hacemos a resta pq estamos filtrando por indice no por lenght y el usuario escribe numeros desde le 1
@@ -183,20 +181,20 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
         };
 
         if (ctx.body == 1) {
-            await state.update({ pago: metodoPago[ctx.body] });
+            await state.update({ metodoPago: metodoPago[ctx.body] });
             const myState = state.getMyState();
             await flowDynamic(["Forma de pago: Efectivo"])
 
 
 
         } else if (ctx.body == 2) {
-            await state.update({ pago: metodoPago[ctx.body] });
+            await state.update({ metodoPago: metodoPago[ctx.body] });
             const myState = state.getMyState();
             await flowDynamic([`Forma de pago: ${myState.pago}, Por favor envianos el comprobante`,
 
             ]);
         } else if (ctx.body == 3) {
-            await state.update({ pago: metodoPago[ctx.body] });
+            await state.update({ metodoPago: metodoPago[ctx.body] });
             const myState = state.getMyState();
             await flowDynamic("Código QR", { media: "https://randomqr.com/assets/images/randomqr-256.png" })
 
@@ -208,7 +206,45 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
     .addAnswer(
         ['Por favor envíanos el comprobante o indique con cuanto cancela en efectivo'], { capture: true }
 
-    ).addAnswer("Procesando...🍓")
+    ).addAnswer("Procesando...🍓", null, async (ctx, { state }) => {
+
+        await state.update({ comprobante: ctx.body });
+
+        const myState = state.getMyState();
+
+        function formatDate(date) {
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');  // Los meses en JavaScript comienzan en 0 (enero es 0)
+            const year = String(date.getFullYear()).slice(-2);  // Obtiene los dos últimos dígitos del año
+
+            return `${hours}:${minutes} ${month} ${day} ${year}`;
+        }
+
+        const pedido = {
+            producto: myState.producto,
+            salsas: myState.salsa,
+            extras: myState.adicional ? myState.adicional : "Sin extras",
+            metodoPago: myState.metodoPago,
+            comprobante: myState.comprobante,
+            fecha: formatDate(new Date()),  // Usa la función para formatear la fecha
+            estado: "Recibido",
+            total: `$${myState.cuenta.toLocaleString()}`,
+        };
+
+        // Función para enviar el pedido como objeto a Firestore
+        async function enviarPedido() {
+            const docRef = db.collection('pedidos').doc();  // Crea un documento con ID autogenerado
+            await docRef.set(pedido);  // Envía el objeto como documento
+
+            console.log('Pedido enviado a la base de datos.');
+        }
+
+        // Llamar a la función para enviar el pedido
+        enviarPedido();
+
+    },)
     .addAnswer("🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨", {
         delay: 2000
     })

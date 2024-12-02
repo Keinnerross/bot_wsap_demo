@@ -29,7 +29,8 @@ const unToppingUnaSalsa = addKeyword(bodyEntry.toString()).addAnswer([`${menuCho
     "",
     "Escoje una *salsa* gratis",
     "",
-...salsas.map((salsa, index) => `*${index + 1}️.-* ${salsa}`)],
+    ...salsas.map((salsa, index) => `${index + 1}\u20E3 ${salsa}`)
+],
     {
         capture: true,
     },
@@ -107,17 +108,16 @@ const unToppingUnaSalsa = addKeyword(bodyEntry.toString()).addAnswer([`${menuCho
     "¿Quieres mas salsas o toppings por un costo adicional?",
     "",
     "*Salsas:*",
-    ...adicionales.salsas.map((item, index) => `*${index + 1}️.-* ${item.salsa} - $${item.precio.toLocaleString()}`),
+    ...adicionales.salsas.map((item, index) => `${index + 1}️.- ${item.salsa} - $${item.precio.toLocaleString()}`),
     "",
-    "*Toppings:*",
+    "*Toppings clasicos: $3.000*",
     //El valor del 5 es definido por la cantidad de salsas que hay es decir salsa.lenght, ahora es manual.
-    "Clasicos: $3.000",
-    ...adicionales.toppingsClasicos.map((item, index) => `*${index + 5}️.-* ${item.topping}`),
+    ...adicionales.toppingsClasicos.map((item, index) => `${index + 5}️.- ${item.topping}`),
     "",
-    "Premium: $4.000",
-    ...adicionales.toppingsPremiums.map((item, index) => `*${index + 16}️.-* ${item.topping}`),
+    "*Toppings Premium: $4.000*",
+    ...adicionales.toppingsPremiums.map((item, index) => `${index + 16}️.- ${item.topping}`),
     "",
-    "*0.-* No gracias",
+    "0.- No gracias",
 
 
 

@@ -33,3 +33,7 @@ jspm_packages/
 
 #db
 db.json
+
+
+#Firestore Credentials
+config/*.json
