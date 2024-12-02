@@ -4,19 +4,9 @@ module.exports = {
         commonjs: true,
         es2021: true,
     },
-    overrides: [
-        {
-            env: {
-                node: true,
-            },
-            files: ['.eslintrc.{js,cjs}'],
-            parserOptions: {
-                sourceType: 'script',
-            },
-        },
-    ],
     parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: 2023, // Asegúrate de que la versión de ECMAScript esté actualizada
+        sourceType: 'module', // Esto es clave para que ESLint entienda los imports y exports
     },
     plugins: ['bot-whatsapp'],
     extends: ['plugin:bot-whatsapp/recommended'],

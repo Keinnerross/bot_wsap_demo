@@ -1,15 +1,15 @@
 //Imports
 
 const { createBot, createProvider, createFlow, addKeyword, } = require('@bot-whatsapp/bot')
-const QRPortalWeb = require('@bot-whatsapp/portal')
+const QRPortalWeb = require('./myLibs/@bot-whatsapp/portal/lib/portal.http.cjs')
+
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const JsonFileAdapter = require('@bot-whatsapp/database/json')
-const { EVENTS } = require('@bot-whatsapp/bot/')
 
 ////
 
 
-const flowWelcome = require('./src/flows/welcome.js');
+const flowWelcome = require('./flows/welcome.js');
 const flowThanks = addKeyword("gracias").addAnswer("Estoy aquí para ayudarte 🦁")
 
 
