@@ -1,23 +1,35 @@
-// Conectar con el servidor WebSocket
 const socket = io(); // Conexión al servidor WebSocket
+
+// Recuperar los pedidos ya recibidos desde localStorage al iniciar
 
 // Escuchar el evento 'new-order' que el servidor emite
 socket.on('new-order', (order) => {
-    console.log('Nuevo pedido recibido:', order);
+    // Comprobar si el pedido ya ha sido recibido
 
-    // Mostrar alerta con SweetAlert
-    Swal.fire({
-        title: '¡Nuevo Pedido!',
-        text: `Producto: ${order.producto}\nEstado: ${order.estado}`,
-        icon: 'info',
-        timer: 5000, // Tiempo en milisegundos (5 segundos)
-        timerProgressBar: true,
-        showConfirmButton: false, // Eliminar el botón de confirmar
-    });
 
-    // Agregar el nuevo pedido a la lista en el DOM
+    // Guardar la lista actualizada en localStorage
+
+    if (order.estado == "En proceso") {
+        Swal.fire({
+            title: '¡Nuevo Pedido!',
+            text: `Producto: ${order.producto}\nEstado: ${order.estado}`,
+            icon: 'info',
+            timer: 5000, // Tiempo en milisegundos (5 segundos)
+            timerProgressBar: true,
+            showConfirmButton: false, // Eliminar el botón de confirmar
+        });
+    }
+
+
+    // Agregar el nuevo pedido al principio de la lista en el DOM
     const ordersList = document.getElementById('orders-list');
     const listItem = document.createElement('li');
-    listItem.textContent = `Pedido ID: ${order.estado}, Producto: ${order.producto}`;
-    ordersList.appendChild(listItem);
+    listItem.textContent = `Producto: ${order.producto}, Pedido ID: ${order.id}, Fecha: ${order.fecha}, Fecha: ${order.estado}`;
+
+    // Insertar el nuevo elemento al inicio de la lista
+    if (ordersList.firstChild) {
+        ordersList.insertBefore(listItem, ordersList.firstChild);
+    } else {
+        ordersList.appendChild(listItem); // Si la lista está vacía, agregar el elemento normalmente
+    }
 });

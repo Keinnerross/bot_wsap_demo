@@ -201,11 +201,11 @@ const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una
     }
 )
     .addAnswer(
-        ['Por favor envíanos el comprobante o indique con cuanto cancela en efectivo'], { capture: true }
+        ['Por favor envíanos el comprobante o indique con cuanto cancela en efectivo'], { capture: true }, async (ctx, { state }) => {
+            await state.update({ comprobante: ctx.body });
+        })
+        .addAnswer("Procesando...🍓", null, async (ctx, { state }) => {
 
-    ).addAnswer("Procesando...🍓", null, async (ctx, { state }) => {
-
-        await state.update({ comprobante: ctx.body });
 
         const myState = state.getMyState();
 

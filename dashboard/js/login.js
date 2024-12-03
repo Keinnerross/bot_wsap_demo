@@ -21,6 +21,9 @@ window.onload = () => {
       title: 'Login Successful',
       text: data.message,
       confirmButtonText: 'OK'
+    }).then(() => {
+      // Después de que el usuario cierre la alerta, recargamos la página
+      window.location.reload(); // Recarga la página para mostrar los pedidos inmediatamente
     });
 
     document.getElementById('loginContainer').style.display = 'none';

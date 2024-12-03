@@ -7,7 +7,7 @@ const polka = require('polka');
 const http = require('http');
 const socketIo = require('socket.io');
 const pug = require('pug');
-const  db = require('../../../../firebase.js'); // Asegúrate de que db esté inicializado correctamente
+const db = require('../../../../firebase.js'); // Asegúrate de que db esté inicializado correctamente
 
 const HTTP_PORT = process.env.PORT || 3000;
 const QR_FILE = process.env.QR_FILE ?? 'bot';
@@ -16,7 +16,7 @@ const PUBLIC_URL = process.env.PUBLIC_URL ?? process.env.RAILWAY_STATIC_URL ?? '
 const dir = [join(__dirname, 'dashboard'), join(__dirname, '..', '..', '..', '..', 'dashboard')].find((i) => existsSync(i));
 const serve = require('serve-static')(dir);
 
-let currentUser = null;  // Variable para almacenar al usuario autenticado
+let currentUser = null; // Variable para almacenar al usuario autenticado
 
 const start = (args) => {
     const injectArgs = {
@@ -36,12 +36,10 @@ const start = (args) => {
         console.log(``);
     };
 
-    // Creamos un servidor HTTP estándar de Node.js
     const server = http.createServer((req, res) => {
         polka()
             .use(serve)
             .get('/', (req, res) => {
-                console.log(`Solicitud recibida en la ruta principal (/)`);
                 const html = pug.renderFile(join(__dirname, '..', '..', '..', '..', 'dashboard', 'index.pug'), {
                     title: 'Mi página con Pug',
                     message: '¡Bienvenido a la página dinámica con Pug!',
@@ -49,47 +47,29 @@ const start = (args) => {
                 res.writeHead(200, { 'Content-Type': 'text/html' });
                 res.end(html);
             })
-            .get('qr.png', (_, res) => {
-                console.log(`Solicitud recibida para qr.png`);
-                const qrSource = [
-                    join(process.cwd(), `${name}.qr.png`),
-                    join(__dirname, '..', `${name}.qr.png`),
-                    join(__dirname, `${name}.qr.png`),
-                ].find((i) => existsSync(i));
-
-                const qrMark = [
-                    join(__dirname, 'dashboard', 'water-mark.png'),
-                    join(__dirname, '..', '..', '..', '..', 'dashboard', 'water-mark.png'),
-                ].find((i) => existsSync(i));
-
-                console.log(`Archivo QR encontrado en: ${qrSource ?? qrMark}`);
-
-                const fileStream = createReadStream(qrSource ?? qrMark);
-                res.writeHead(200, { 'Content-Type': 'image/png' });
-                fileStream.pipe(res);
-            })
             .handler(req, res);
     });
 
-    // Inicializar socket.io en el servidor
     const io = socketIo(server);
 
-    // Exportar la instancia de io para que se pueda usar en otros archivos
-
-    ///////////////////// Funciones relacionadas con socket /////////////////////
-
     io.on('connection', (socket) => {
-        console.log('socket conectado');
+        console.log('Socket conectado');
 
-        const STATIC_USERNAME = "admin";
-        const STATIC_PASSWORD = "123456";
+        const STATIC_USERNAME = 'admin';
+        const STATIC_PASSWORD = '123456';
 
-        socket.on('login', (data) => {
+        socket.on('login', async (data) => {
             const { username, password } = data;
 
             if (username === STATIC_USERNAME && password === STATIC_PASSWORD) {
                 currentUser = { username };
-                socket.emit('login-success', { message: 'Login exitoso', user: { username } });
+
+                // Enviar la lista de pedidos al cliente autenticado
+                const pedidosRef = db.collection('pedidos');
+                const snapshot = await pedidosRef.get();
+                const pedidos = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+                socket.emit('login-success', { message: 'Login exitoso', user: { username }, pedidos });
             } else {
                 socket.emit('login-error', { message: 'Usuario o contraseña incorrectos' });
             }
@@ -106,28 +86,25 @@ const start = (args) => {
         // Escuchar cambios en la colección 'pedidos' en Firestore
         const pedidosRef = db.collection('pedidos');
 
-        // Listener para cambios en los pedidos
         const unsubscribe = pedidosRef.onSnapshot((snapshot) => {
+            if (!currentUser) return; // No emitir eventos si no hay usuario autenticado
+
             snapshot.docChanges().forEach((change) => {
+                const pedido = { id: change.doc.id, ...change.doc.data() };
+
                 if (change.type === 'added') {
-                    // console.log('Nuevo pedido agregado:', change.doc.data());
-                    socket.emit('new-order', change.doc.data());  // Emitir el nuevo pedido al cliente
-                }
-                if (change.type === 'modified') {
-                    console.log('Pedido modificado:', change.doc.data());
-                    socket.emit('order-updated', change.doc.data());  // Emitir la actualización del pedido
-                }
-                if (change.type === 'removed') {
-                    console.log('Pedido eliminado:', change.doc.data());
-                    socket.emit('order-removed', change.doc.data());  // Emitir que el pedido fue eliminado
+                    socket.emit('new-order', pedido);
+                } else if (change.type === 'modified') {
+                    socket.emit('order-updated', pedido);
+                } else if (change.type === 'removed') {
+                    socket.emit('order-removed', pedido);
                 }
             });
         });
 
-        // Desuscribir el listener cuando el socket se desconecte
         socket.on('disconnect', () => {
-            console.log('socket desconectado');
-            unsubscribe();  // Detener la escucha cuando el cliente se desconecte
+            console.log('Socket desconectado');
+            unsubscribe();
         });
     });
 

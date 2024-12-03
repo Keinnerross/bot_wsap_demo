@@ -4,6 +4,7 @@
 const { addKeyword } = require('@bot-whatsapp/bot');
 const menu = require('../flowsData/menuData.js');
 const adicionales = require('../flowsData/adicionales.js');
+const db = require('../../firebase.js');
 
 
 //variables
@@ -28,7 +29,7 @@ const dosToppingsUnaSalsa = addKeyword(bodyEntry.toString()).addAnswer([`${menuC
     "",
     "Escoje una *salsa* gratis",
     "",
-    ...salsas.map((salsa, index) => `${index + 1}\u20E3 ${salsa}`)
+...salsas.map((salsa, index) => `${index + 1}\u20E3 ${salsa}`)
 ],
     {
         capture: true,
@@ -140,7 +141,7 @@ const dosToppingsUnaSalsa = addKeyword(bodyEntry.toString()).addAnswer([`${menuC
 
 
 
-],  {
+], {
     capture: true,
     delay: 1500,
 }, async (ctx, { flowDynamic, state, fallBack }) => {
@@ -248,20 +249,20 @@ const dosToppingsUnaSalsa = addKeyword(bodyEntry.toString()).addAnswer([`${menuC
         };
 
         if (ctx.body == 1) {
-            await state.update({ pago: metodoPago[ctx.body] });
+            await state.update({ metodoPago: metodoPago[ctx.body] });
             const myState = state.getMyState();
             await flowDynamic(["Forma de pago: Efectivo"])
 
 
 
         } else if (ctx.body == 2) {
-            await state.update({ pago: metodoPago[ctx.body] });
+            await state.update({ metodoPago: metodoPago[ctx.body] });
             const myState = state.getMyState();
             await flowDynamic([`Forma de pago: ${myState.pago}, Por favor envianos el comprobante`,
 
             ]);
         } else if (ctx.body == 3) {
-            await state.update({ pago: metodoPago[ctx.body] });
+            await state.update({ metodoPago: metodoPago[ctx.body] });
             const myState = state.getMyState();
             await flowDynamic("Código QR", { media: "https://randomqr.com/assets/images/randomqr-256.png" })
 
@@ -271,9 +272,49 @@ const dosToppingsUnaSalsa = addKeyword(bodyEntry.toString()).addAnswer([`${menuC
     }
 )
     .addAnswer(
-        ['Por favor envíanos el comprobante o indique con cuanto cancela en efectivo'], { capture: true }
+        ['Por favor envíanos el comprobante o indique con cuanto cancela en efectivo'], { capture: true }, async (ctx, { state }) => {
+            await state.update({ comprobante: ctx.body });
+        })
+    .addAnswer("Procesando...🍓", null, async (ctx, { state }) => {
 
-    ).addAnswer("Procesando...🍓")
+
+        const myState = state.getMyState();
+
+        function formatDate(date) {
+            const hours = String(date.getHours()).padStart(2, '0');
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');  // Los meses en JavaScript comienzan en 0 (enero es 0)
+            const year = String(date.getFullYear()).slice(-2);  // Obtiene los dos últimos dígitos del año
+
+            return `${hours}:${minutes} ${month} ${day} ${year}`;
+        }
+
+        const pedido = {
+            producto: myState.producto,
+            salsas: myState.salsa,
+            extras: myState.adicional ? myState.adicional : "Sin extras",
+            metodoPago: myState.metodoPago,
+            comprobante: myState.comprobante,
+            fecha: formatDate(new Date()),  // Usa la función para formatear la fecha
+            estado: "En proceso",
+            total: `$${myState.cuenta.toLocaleString()}`,
+        };
+
+        async function enviarPedido() {
+            const docRef = db.collection('pedidos').doc();  // Crea un documento con ID autogenerado
+            await docRef.set(pedido);  // Envía el objeto como documento
+
+            console.log('Pedido enviado a la base de datos.');
+        }
+
+        enviarPedido();
+
+
+
+
+
+    },)
     .addAnswer("🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨", {
         delay: 2000
     })

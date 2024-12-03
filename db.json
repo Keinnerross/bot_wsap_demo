@@ -1,15 +1,15 @@
 [
   {
-    "ref": "3282a8af-1d1c-4353-ba53-743226dc5be2",
-    "keyword": "b14b098d19e3d9e18ddd9fb058384467",
+    "ref": "60cb5099-8ca3-4119-8a1e-db374304df48",
+    "keyword": "5e87cc26ba2d9d322f22fdadfea69899",
     "answer": "Hola",
     "options": {},
     "from": "56922465427",
     "refSerialize": "c22e4066d61d81721def9b25d8a397e8"
   },
   {
-    "ref": "ans_b7efcdbf-0c4e-4529-a875-8c833e0aa46a",
-    "keyword": "key_26487b03-3d0d-4036-8af2-fe5aeaf2679b",
+    "ref": "ans_84cc3584-67ca-42b8-be98-a8891793fa6a",
+    "keyword": "key_ddd00fb1-3d80-4cb8-9239-3dbfdd8890bc",
     "answer": "¡¡Hola hola!! ¡Bienvenidos a Fresata! La magia esta en nuestra crema\n Recuerda que los domicilios inician a partir de la 1:00 pm.\nUn gusto atenderte, ¿en que podemos colaborarte?",
     "options": {
       "media": null,
@@ -23,12 +23,12 @@
       "keyword": {},
       "callback": false
     },
-    "refSerialize": "28b31eec56aa6372aca30b17ebddee43",
+    "refSerialize": "c5b96453b7ca0bf4b84dcceeac42950d",
     "from": "56922465427"
   },
   {
-    "ref": "ans_75d6e483-8628-4f9e-8b86-a2c7405dee30",
-    "keyword": "ans_b7efcdbf-0c4e-4529-a875-8c833e0aa46a",
+    "ref": "ans_6323adc2-1cb1-427f-afa6-1ceb26ee1cdd",
+    "keyword": "ans_84cc3584-67ca-42b8-be98-a8891793fa6a",
     "answer": "Nuestra carta:\nSelecciona el *número* de su preferencia\n\n*1️⃣* Fresas con crema tradicionales - $16.000\n*2️⃣* Fresas con crema (1 topping + 1 salsa) - $18.500\n*3️⃣* Fresas con crema (2 toppings + 1 salsa) - $21.500\n*4️⃣* Fresas con crema y durazno - $18.000\n*5️⃣* Fresas con chocolate - $15.000\n*6️⃣* Bubol fresa - $10.000",
     "options": {
       "media": null,
@@ -40,7 +40,7 @@
       "ref": null,
       "nested": [
         {
-          "ref": "key_b5006160-c6db-4356-9e50-48434f01f57d",
+          "ref": "key_a4c2747a-9de3-433f-af2b-4057be8a751f",
           "keyword": "1",
           "options": {
             "sensitive": false,
@@ -49,8 +49,8 @@
           "refSerialize": "065e0005da6e5c278a53691e53b48955"
         },
         {
-          "ref": "ans_002f37ac-44e9-4e8f-8328-ad61ad4e9a1e",
-          "keyword": "key_b5006160-c6db-4356-9e50-48434f01f57d",
+          "ref": "ans_20160824-c1c6-4ddd-9cec-edaf47d91ae9",
+          "keyword": "key_a4c2747a-9de3-433f-af2b-4057be8a751f",
           "answer": "Fresas con crema tradicionales es una buena elección!\n\nEscoje una *salsa*\n\n1️⃣ Leche condensada\n2️⃣ Arequipe\n3️⃣ Leche condensada + Arequipe ($3000) Adicional",
           "options": {
             "media": null,
@@ -64,11 +64,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "9eacdaa18e2d80c2c50f75862af3c6a5"
+          "refSerialize": "ab907f52e89feeac4bd7ba13db8219eb"
         },
         {
-          "ref": "ans_4e1830f3-bb37-4cf9-9683-0f1ab8b6f928",
-          "keyword": "ans_002f37ac-44e9-4e8f-8328-ad61ad4e9a1e",
+          "ref": "ans_49a97422-d441-48b5-8be3-2fc84f7d4eac",
+          "keyword": "ans_20160824-c1c6-4ddd-9cec-edaf47d91ae9",
           "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
           "options": {
             "media": null,
@@ -82,11 +82,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "070d0192476f676a2e391aec7c51b5a2"
+          "refSerialize": "432812070662baef76d8a0327d12cb7e"
         },
         {
-          "ref": "ans_48480a95-6917-48b0-ba2d-116debbfa3d7",
-          "keyword": "ans_4e1830f3-bb37-4cf9-9683-0f1ab8b6f928",
+          "ref": "ans_dfa4167a-e090-471b-b181-6364dda14cd3",
+          "keyword": "ans_49a97422-d441-48b5-8be3-2fc84f7d4eac",
           "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
           "options": {
             "media": null,
@@ -100,11 +100,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "0d82b768d0765abaebd4712d6ea1f1a5"
+          "refSerialize": "b3fe3ad7655ba2629410e7ed38cef673"
         },
         {
-          "ref": "ans_3239572c-9ca8-422d-9596-4e72391dd517",
-          "keyword": "ans_48480a95-6917-48b0-ba2d-116debbfa3d7",
+          "ref": "ans_20d5e728-84f7-4c7e-a9ba-fc606bc7115e",
+          "keyword": "ans_dfa4167a-e090-471b-b181-6364dda14cd3",
           "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
           "options": {
             "media": null,
@@ -118,11 +118,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "7981ed3ff2919374b0a22c8b9c7bb82c"
+          "refSerialize": "883cfb0cf0004c034d1acf2e8a61ae3f"
         },
         {
-          "ref": "ans_7551fc24-506e-47b2-b26f-e0d413dc2f09",
-          "keyword": "ans_3239572c-9ca8-422d-9596-4e72391dd517",
+          "ref": "ans_0197b9b6-4b6a-4871-81d9-5e5236e89c2f",
+          "keyword": "ans_20d5e728-84f7-4c7e-a9ba-fc606bc7115e",
           "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
           "options": {
             "media": null,
@@ -136,11 +136,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "756e1f0d5b0c177a6871ef0393de1af5"
+          "refSerialize": "8532bcc0023ced9ede590bd9fc1d6959"
         },
         {
-          "ref": "ans_3610a307-656a-42ae-a997-37ef1ce0b426",
-          "keyword": "ans_7551fc24-506e-47b2-b26f-e0d413dc2f09",
+          "ref": "ans_950ed2ae-9d5a-4794-9105-989043feacc3",
+          "keyword": "ans_0197b9b6-4b6a-4871-81d9-5e5236e89c2f",
           "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
           "options": {
             "media": null,
@@ -152,13 +152,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "d7882727cfff9c1a9a34838181fde77f"
+          "refSerialize": "3ba05e1960a697fbbe33590b44b3ce9c"
         },
         {
-          "ref": "ans_0c320462-0450-4872-88c3-e597a7e9e71e",
-          "keyword": "ans_3610a307-656a-42ae-a997-37ef1ce0b426",
+          "ref": "ans_b6faef50-8d3e-4e30-b923-2cb2177e36e6",
+          "keyword": "ans_950ed2ae-9d5a-4794-9105-989043feacc3",
           "answer": "Procesando...🍓",
           "options": {
             "media": null,
@@ -172,11 +172,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "ba3b6f2c9beff2023727881b20cb5042"
+          "refSerialize": "478129ccd2e5b5c5d3f79b31d747c656"
         },
         {
-          "ref": "ans_f4ea7aa4-b480-432b-85fd-ca63b1615227",
-          "keyword": "ans_0c320462-0450-4872-88c3-e597a7e9e71e",
+          "ref": "ans_ccce3dda-2ca3-4f86-b5fb-ee12179f72d2",
+          "keyword": "ans_b6faef50-8d3e-4e30-b923-2cb2177e36e6",
           "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
           "options": {
             "media": null,
@@ -190,10 +190,10 @@
             "keyword": {},
             "callback": false
           },
-          "refSerialize": "650bd5805f25068df19a10ff36a5cd4b"
+          "refSerialize": "95fa781797ea2e11cd06238fa12675ff"
         },
         {
-          "ref": "key_31e0badd-0e77-4f84-8730-f7e75b496aef",
+          "ref": "key_5207ad07-3792-4fe2-a5e2-844220c3013c",
           "keyword": "4",
           "options": {
             "sensitive": false,
@@ -202,8 +202,8 @@
           "refSerialize": "fc09f52170be47fcb14a1cee9c5d3c52"
         },
         {
-          "ref": "ans_60375169-9449-4642-97fb-abd7b81280e9",
-          "keyword": "key_31e0badd-0e77-4f84-8730-f7e75b496aef",
+          "ref": "ans_094082c4-a46d-42df-a5c7-5a907512c5bd",
+          "keyword": "key_5207ad07-3792-4fe2-a5e2-844220c3013c",
           "answer": "Fresas con crema y durazno es una buena elección!\n\nEscoje una *salsa gratis*\n\n1⃣ Leche condensada\n2⃣ Arequipe\n3⃣ Chocolate Blanco\n4⃣ Chocolate Negro",
           "options": {
             "media": null,
@@ -217,11 +217,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "f80c9978f840d1ee835d407b1e4044c6"
+          "refSerialize": "aa8c075677751681af0eca9874579746"
         },
         {
-          "ref": "ans_92234cbd-09a4-4730-bd03-0146ffccb18a",
-          "keyword": "ans_60375169-9449-4642-97fb-abd7b81280e9",
+          "ref": "ans_6717b3c1-6b4f-4133-8d6b-acfe3c32378e",
+          "keyword": "ans_094082c4-a46d-42df-a5c7-5a907512c5bd",
           "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
           "options": {
             "media": null,
@@ -235,11 +235,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "c6bad5d39383c43cbd6214c1f200a410"
+          "refSerialize": "35b6ea047d30938930b72db0360b1834"
         },
         {
-          "ref": "ans_66003531-8715-441b-a5bb-d5a3ff9c3090",
-          "keyword": "ans_92234cbd-09a4-4730-bd03-0146ffccb18a",
+          "ref": "ans_4cfcf348-fb0f-472a-aebf-fb756b0d459a",
+          "keyword": "ans_6717b3c1-6b4f-4133-8d6b-acfe3c32378e",
           "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
           "options": {
             "media": null,
@@ -253,11 +253,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "2cbb9fd5c049e7d43adc6d9c69bf5b49"
+          "refSerialize": "25ac0e9709ff51184fb71b8e23900462"
         },
         {
-          "ref": "ans_8e876fab-978e-486e-8867-b6e6e72d3a9c",
-          "keyword": "ans_66003531-8715-441b-a5bb-d5a3ff9c3090",
+          "ref": "ans_748c7fbb-ab79-4258-93be-40075b45ca68",
+          "keyword": "ans_4cfcf348-fb0f-472a-aebf-fb756b0d459a",
           "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
           "options": {
             "media": null,
@@ -271,11 +271,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "c999352b1f4f35546920cd46474b11d1"
+          "refSerialize": "b9c39e68d3bcc6c6fb1edb502a8f28ed"
         },
         {
-          "ref": "ans_b4d0b7cf-d4fd-4d42-a284-9310f593888c",
-          "keyword": "ans_8e876fab-978e-486e-8867-b6e6e72d3a9c",
+          "ref": "ans_c153e8bf-4365-4b07-8658-b9d18391eb41",
+          "keyword": "ans_748c7fbb-ab79-4258-93be-40075b45ca68",
           "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
           "options": {
             "media": null,
@@ -289,11 +289,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "b798018005576ff2238a48c8df662c0f"
+          "refSerialize": "5d9d5678a5db456898e37e6da4af48f1"
         },
         {
-          "ref": "ans_f55f2108-23dc-49ec-9190-aed63a63e0e3",
-          "keyword": "ans_b4d0b7cf-d4fd-4d42-a284-9310f593888c",
+          "ref": "ans_58894bf8-6b53-466d-affa-6edecb480f03",
+          "keyword": "ans_c153e8bf-4365-4b07-8658-b9d18391eb41",
           "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
           "options": {
             "media": null,
@@ -305,13 +305,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "19f0334ec2434cd9e45d9651da1d82c7"
+          "refSerialize": "b5355afbe9dd20815ecca95e558652f6"
         },
         {
-          "ref": "ans_96112516-61ec-42d9-bbb6-acb69be0e5c4",
-          "keyword": "ans_f55f2108-23dc-49ec-9190-aed63a63e0e3",
+          "ref": "ans_b7a5545b-2a65-4ab4-b7a4-d661d0099d7e",
+          "keyword": "ans_58894bf8-6b53-466d-affa-6edecb480f03",
           "answer": "Procesando...🍓",
           "options": {
             "media": null,
@@ -323,13 +323,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "0eb35d1b3d6bb50f8c8e5cdc40e245a8"
+          "refSerialize": "e3bb57d39b6f859c025700cda5baed6e"
         },
         {
-          "ref": "ans_7fe7d6e8-60d9-4d72-a4c4-bc7519c3f347",
-          "keyword": "ans_96112516-61ec-42d9-bbb6-acb69be0e5c4",
+          "ref": "ans_96253f4b-f8f9-4738-a516-de90fd4ad939",
+          "keyword": "ans_b7a5545b-2a65-4ab4-b7a4-d661d0099d7e",
           "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
           "options": {
             "media": null,
@@ -343,10 +343,10 @@
             "keyword": {},
             "callback": false
           },
-          "refSerialize": "fb4682b93c3292cd184f4d8776facd06"
+          "refSerialize": "c0813f21ce7d05ebea205a40229eb288"
         },
         {
-          "ref": "key_8d34d70f-4413-48a8-a93c-614a120a98c2",
+          "ref": "key_b32f88a8-b7c4-42c9-934d-8be5aedd77d9",
           "keyword": "5",
           "options": {
             "sensitive": false,
@@ -355,8 +355,8 @@
           "refSerialize": "660d6f380cd3d2aa67431f161ba4eccf"
         },
         {
-          "ref": "ans_b9551fdd-712d-4165-a60e-3856d4faea6b",
-          "keyword": "key_8d34d70f-4413-48a8-a93c-614a120a98c2",
+          "ref": "ans_cbf80e9b-3a6f-4879-aac0-f22bc4fa4b4e",
+          "keyword": "key_b32f88a8-b7c4-42c9-934d-8be5aedd77d9",
           "answer": "Fresas con chocolate es una buena elección!\n\nEscoje una *salsa gratis*\n\n1⃣ Chocolate Blanco\n2⃣ Chocolate Negro\n3⃣ Combinado",
           "options": {
             "media": null,
@@ -370,11 +370,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "6790dacd029381d0f871e427a2c2347c"
+          "refSerialize": "f6bbb29efab769f3513f9e81250ad021"
         },
         {
-          "ref": "ans_7a2cbd03-cb41-47a1-bdc4-8c464b5c6cc2",
-          "keyword": "ans_b9551fdd-712d-4165-a60e-3856d4faea6b",
+          "ref": "ans_bc4a5c26-ead7-4764-955c-82ac5efdbf33",
+          "keyword": "ans_cbf80e9b-3a6f-4879-aac0-f22bc4fa4b4e",
           "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
           "options": {
             "media": null,
@@ -388,11 +388,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "1d59a5f2a0d5ea3d5f29ddae237643cf"
+          "refSerialize": "fb4974bb6d7e440c5b5d9ac8f09856f3"
         },
         {
-          "ref": "ans_2217c2f5-4df8-41ce-86b2-a0c9bbd92bd8",
-          "keyword": "ans_7a2cbd03-cb41-47a1-bdc4-8c464b5c6cc2",
+          "ref": "ans_5b006029-01e4-4d2e-8f68-9d0ae1e3d13f",
+          "keyword": "ans_bc4a5c26-ead7-4764-955c-82ac5efdbf33",
           "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
           "options": {
             "media": null,
@@ -406,11 +406,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "af2d5289d3ad5794de06dd84c45a8bb5"
+          "refSerialize": "534079e2e12ae4fc012734f2cfe4ab87"
         },
         {
-          "ref": "ans_81ae390c-c7a4-4f7c-bd70-15d6b389cc54",
-          "keyword": "ans_2217c2f5-4df8-41ce-86b2-a0c9bbd92bd8",
+          "ref": "ans_87a4c51b-2ad2-450e-ae24-56da55c8c55b",
+          "keyword": "ans_5b006029-01e4-4d2e-8f68-9d0ae1e3d13f",
           "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
           "options": {
             "media": null,
@@ -424,11 +424,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "42fb1ae4b9420ba98726e55ea17f943c"
+          "refSerialize": "d2776d33200a018762eda1b9159e45d1"
         },
         {
-          "ref": "ans_2212b703-b3ad-45ca-8287-3b2b226f9797",
-          "keyword": "ans_81ae390c-c7a4-4f7c-bd70-15d6b389cc54",
+          "ref": "ans_135458aa-e1e9-4ec4-906a-1befed4a5919",
+          "keyword": "ans_87a4c51b-2ad2-450e-ae24-56da55c8c55b",
           "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
           "options": {
             "media": null,
@@ -442,11 +442,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "b69b6a18bbdb10c05d135409fe41d9b2"
+          "refSerialize": "0cf76ca8dde9fb635ab8414009607e01"
         },
         {
-          "ref": "ans_6f8c0c47-5fbd-4912-88e5-d7c5cf30866b",
-          "keyword": "ans_2212b703-b3ad-45ca-8287-3b2b226f9797",
+          "ref": "ans_c2238242-c4c7-40d1-9062-e28e5e33adc7",
+          "keyword": "ans_135458aa-e1e9-4ec4-906a-1befed4a5919",
           "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
           "options": {
             "media": null,
@@ -458,13 +458,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "b551c6baf30d9dd4e78220006beda313"
+          "refSerialize": "119fc48f4235d2a0d31a1f3c38ee645d"
         },
         {
-          "ref": "ans_4ff94183-65ae-4863-a627-88d71763788e",
-          "keyword": "ans_6f8c0c47-5fbd-4912-88e5-d7c5cf30866b",
+          "ref": "ans_e8ae9ca3-92f0-4538-b65c-784329b65bd1",
+          "keyword": "ans_c2238242-c4c7-40d1-9062-e28e5e33adc7",
           "answer": "Procesando...🍓",
           "options": {
             "media": null,
@@ -476,13 +476,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "3d75aa1b3b0a525748da74a40f53fb48"
+          "refSerialize": "546342071749c2279172d37c2c267c7f"
         },
         {
-          "ref": "ans_80df4952-4c02-495a-8e29-9062bc626925",
-          "keyword": "ans_4ff94183-65ae-4863-a627-88d71763788e",
+          "ref": "ans_a54ae931-ed32-431f-b1d1-5c9360332bf5",
+          "keyword": "ans_e8ae9ca3-92f0-4538-b65c-784329b65bd1",
           "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
           "options": {
             "media": null,
@@ -496,10 +496,10 @@
             "keyword": {},
             "callback": false
           },
-          "refSerialize": "bb84aeb24d1662687a491d0e5892ddd4"
+          "refSerialize": "e2c63d93aef4c7a0ce7fb9b1734b1a01"
         },
         {
-          "ref": "key_ed0e5316-fffb-48df-90d8-b68297a780e4",
+          "ref": "key_2c1444b9-f3eb-45e4-a28d-abd9a70122d4",
           "keyword": "6",
           "options": {
             "sensitive": false,
@@ -508,8 +508,8 @@
           "refSerialize": "ae093091123de34d8570657f16bd7343"
         },
         {
-          "ref": "ans_434521ad-eec0-4965-bc4f-d84a987c9ae2",
-          "keyword": "key_ed0e5316-fffb-48df-90d8-b68297a780e4",
+          "ref": "ans_969f1b73-b64c-445a-8dc6-355b6026e3ec",
+          "keyword": "key_2c1444b9-f3eb-45e4-a28d-abd9a70122d4",
           "answer": "Bubol fresa es una buena elección!",
           "options": {
             "media": null,
@@ -523,11 +523,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "4937b9478b48c2658ae8ac664470ed57"
+          "refSerialize": "48035e995892bf3b838e24bb255db169"
         },
         {
-          "ref": "ans_b8730e93-9e21-4cd1-97c9-e531799ccc1f",
-          "keyword": "ans_434521ad-eec0-4965-bc4f-d84a987c9ae2",
+          "ref": "ans_5eaab13c-1297-412f-b432-940cfe4a1615",
+          "keyword": "ans_969f1b73-b64c-445a-8dc6-355b6026e3ec",
           "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
           "options": {
             "media": null,
@@ -541,11 +541,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "f980522c2605982060b66aeac40f5b40"
+          "refSerialize": "14cfee62878c9e3bf09fceff1ba3b5be"
         },
         {
-          "ref": "ans_485335d2-c6d1-4c55-aaf5-efb95ddb93a6",
-          "keyword": "ans_b8730e93-9e21-4cd1-97c9-e531799ccc1f",
+          "ref": "ans_16e8a4b2-e32c-4f9d-86f6-8e05caedc0c6",
+          "keyword": "ans_5eaab13c-1297-412f-b432-940cfe4a1615",
           "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
           "options": {
             "media": null,
@@ -559,11 +559,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "28966ee6453405e62d3106c02052e11f"
+          "refSerialize": "ce078e548c636d6b59a2ed524b63c25a"
         },
         {
-          "ref": "ans_6273edb0-4800-495e-8e74-6506271192cc",
-          "keyword": "ans_485335d2-c6d1-4c55-aaf5-efb95ddb93a6",
+          "ref": "ans_c218d881-64ea-41da-85f8-5b35aefe40bd",
+          "keyword": "ans_16e8a4b2-e32c-4f9d-86f6-8e05caedc0c6",
           "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
           "options": {
             "media": null,
@@ -577,11 +577,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "2d3507f63955b1e4a2c7d3a4fb68069e"
+          "refSerialize": "a16ecffa1d531df7c29f49cb380a8076"
         },
         {
-          "ref": "ans_98672a53-b581-4bf4-9c55-7668e269c5f0",
-          "keyword": "ans_6273edb0-4800-495e-8e74-6506271192cc",
+          "ref": "ans_1e9ade0f-753b-42f0-882b-d309f660159a",
+          "keyword": "ans_c218d881-64ea-41da-85f8-5b35aefe40bd",
           "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
           "options": {
             "media": null,
@@ -593,13 +593,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "e0e8d723024552329514124f7b47314c"
+          "refSerialize": "9e8683ef7c8dc00aa6516f1b3d6b4642"
         },
         {
-          "ref": "ans_3ec1668d-cffc-4ea4-af12-33385eba94ab",
-          "keyword": "ans_98672a53-b581-4bf4-9c55-7668e269c5f0",
+          "ref": "ans_7c9512c0-4051-4ce1-8649-c8b7d0ad8daf",
+          "keyword": "ans_1e9ade0f-753b-42f0-882b-d309f660159a",
           "answer": "Procesando...🍓",
           "options": {
             "media": null,
@@ -611,13 +611,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "af090e874e01d1d27d3fc1c7c72b872f"
+          "refSerialize": "535e33b2a048daa7c178e3e35be6d49e"
         },
         {
-          "ref": "ans_d458d9a0-2334-4c3c-802e-390b04605252",
-          "keyword": "ans_3ec1668d-cffc-4ea4-af12-33385eba94ab",
+          "ref": "ans_56546e75-0197-4963-9722-eecc4afd42ed",
+          "keyword": "ans_7c9512c0-4051-4ce1-8649-c8b7d0ad8daf",
           "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
           "options": {
             "media": null,
@@ -631,10 +631,10 @@
             "keyword": {},
             "callback": false
           },
-          "refSerialize": "940714335e5e060dfa2f00ca2107ddff"
+          "refSerialize": "1d485efe81ab3912dbb878646dcd6993"
         },
         {
-          "ref": "key_ff4a975b-9d2e-47b5-8664-8d8a2bf83eb3",
+          "ref": "key_9f1cc138-6a09-4d33-93e8-259fd72a77a1",
           "keyword": "2",
           "options": {
             "sensitive": false,
@@ -643,8 +643,8 @@
           "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
         },
         {
-          "ref": "ans_7af85ca9-93e1-4ebd-8f55-d273daea3a94",
-          "keyword": "key_ff4a975b-9d2e-47b5-8664-8d8a2bf83eb3",
+          "ref": "ans_58f74b84-173f-4303-9671-6d2c4f8295c4",
+          "keyword": "key_9f1cc138-6a09-4d33-93e8-259fd72a77a1",
           "answer": "Fresas con crema (1 topping + 1 salsa) es una buena elección!\n\nEscoje una *salsa* gratis\n\n1⃣ Leche Condensada\n2⃣ Arequipe\n3⃣ Chocolate Blanco\n4⃣ Chocolate Negro",
           "options": {
             "media": null,
@@ -658,11 +658,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "4e5bd1f49cb34ad1647706a1be96c878"
+          "refSerialize": "c82ecc7f2b6fc29077d5dfd27fa87e0e"
         },
         {
-          "ref": "ans_a73613f5-2b61-47c4-b0a1-aa0204867530",
-          "keyword": "ans_7af85ca9-93e1-4ebd-8f55-d273daea3a94",
+          "ref": "ans_4113008a-afcf-40a9-94e7-43a142183690",
+          "keyword": "ans_58f74b84-173f-4303-9671-6d2c4f8295c4",
           "answer": "Escoje una *segunda salsa* gratis",
           "options": {
             "media": null,
@@ -676,11 +676,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "141a8b2f2dafe2fb471d73a7919d4bc1"
+          "refSerialize": "687e9192c8b49bbc2fb258175e6ec2f4"
         },
         {
-          "ref": "ans_f48d1d04-da3d-4241-9f59-7eafb850730f",
-          "keyword": "ans_a73613f5-2b61-47c4-b0a1-aa0204867530",
+          "ref": "ans_9e1772d0-d141-4309-87b9-9293ba3fdce7",
+          "keyword": "ans_4113008a-afcf-40a9-94e7-43a142183690",
           "answer": "Escoge un Topping:\n*1️.-* Piazza\n*2️.-* Oreo\n*3️.-* Chips de chocolate\n*4️.-* Zucarita\n*5️.-* Maní triturado\n*6️.-* Masmelos\n*7️.-* Leche en polvo\n*8️.-* Lluvia de chocolate\n*9️.-* Fresa\n*10️.-* Granola\n*11️.-* Milo",
           "options": {
             "media": null,
@@ -694,11 +694,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "c681068ddcf0b84fdd883370674dcae7"
+          "refSerialize": "5c10c5ee5229ac0eb63f45a1dfa9819b"
         },
         {
-          "ref": "ans_9c2be1bc-7a94-460b-9927-bade7b7d1009",
-          "keyword": "ans_f48d1d04-da3d-4241-9f59-7eafb850730f",
+          "ref": "ans_304c859b-4e32-41de-bea5-ca7326395184",
+          "keyword": "ans_9e1772d0-d141-4309-87b9-9293ba3fdce7",
           "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
           "options": {
             "media": null,
@@ -712,11 +712,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "3b33a99ad75a97c046a0680744224d54"
+          "refSerialize": "89b2e373d484609e053a9b16efc8573f"
         },
         {
-          "ref": "ans_68a459e1-62de-4f84-a7ca-3fb74b5970f3",
-          "keyword": "ans_9c2be1bc-7a94-460b-9927-bade7b7d1009",
+          "ref": "ans_454d6a4d-b0a0-4d38-b09e-bd365bce8db2",
+          "keyword": "ans_304c859b-4e32-41de-bea5-ca7326395184",
           "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
           "options": {
             "media": null,
@@ -730,11 +730,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "4103c0803ff3357df9cc9a1b3147a4fd"
+          "refSerialize": "a4bc524cca559be7f726c5d6fd07e367"
         },
         {
-          "ref": "ans_9de9e4e5-cb23-45c1-858a-073f444d70d8",
-          "keyword": "ans_68a459e1-62de-4f84-a7ca-3fb74b5970f3",
+          "ref": "ans_beb712c4-70e3-4b74-8f09-1d7b65b04134",
+          "keyword": "ans_454d6a4d-b0a0-4d38-b09e-bd365bce8db2",
           "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
           "options": {
             "media": null,
@@ -748,11 +748,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "ba3b84afde40b509bf839a212078085b"
+          "refSerialize": "71d994b1230a887fcc8d77c73e1096cc"
         },
         {
-          "ref": "ans_115a306a-3b4f-4643-9f3b-231dff9bdb88",
-          "keyword": "ans_9de9e4e5-cb23-45c1-858a-073f444d70d8",
+          "ref": "ans_b5220077-d2d2-469c-82d9-e41795af145d",
+          "keyword": "ans_beb712c4-70e3-4b74-8f09-1d7b65b04134",
           "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
           "options": {
             "media": null,
@@ -766,11 +766,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "40953c12b849894cf8073f1c67d5e6ba"
+          "refSerialize": "14dabaddce2cb0af80629d063d33d8cc"
         },
         {
-          "ref": "ans_5b2f1243-5558-443b-9b1c-e3893fc50a6b",
-          "keyword": "ans_115a306a-3b4f-4643-9f3b-231dff9bdb88",
+          "ref": "ans_b4bc00d1-1b1a-481a-bc5b-b7af965d57cc",
+          "keyword": "ans_b5220077-d2d2-469c-82d9-e41795af145d",
           "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
           "options": {
             "media": null,
@@ -782,13 +782,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "ac3b35357c1b3e10df26ca289488a201"
+          "refSerialize": "b21d15b9bf8649ddabba88571c18fd5d"
         },
         {
-          "ref": "ans_025f521d-46f1-4d17-8e52-c08f76ba653a",
-          "keyword": "ans_5b2f1243-5558-443b-9b1c-e3893fc50a6b",
+          "ref": "ans_ee8e48d2-c05e-4beb-8811-ae3a2d719b12",
+          "keyword": "ans_b4bc00d1-1b1a-481a-bc5b-b7af965d57cc",
           "answer": "Procesando...🍓",
           "options": {
             "media": null,
@@ -800,13 +800,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "b34b6c9390cc607ff2bdacd4ba026b08"
+          "refSerialize": "9848a557bcb098ead11a1baad6cecc96"
         },
         {
-          "ref": "ans_666adf72-70ea-4a7d-9eff-d52a7e4c5122",
-          "keyword": "ans_025f521d-46f1-4d17-8e52-c08f76ba653a",
+          "ref": "ans_56563035-7db9-4eed-a9be-9eb1234cfc0e",
+          "keyword": "ans_ee8e48d2-c05e-4beb-8811-ae3a2d719b12",
           "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
           "options": {
             "media": null,
@@ -820,10 +820,10 @@
             "keyword": {},
             "callback": false
           },
-          "refSerialize": "15c8be8bc0dcf30e022ef94f9f4b935e"
+          "refSerialize": "7d81eec654cbeb85e6199f21de54be8d"
         },
         {
-          "ref": "key_708f9fe9-60fc-4fe8-896b-bccb037762cd",
+          "ref": "key_35a24f63-91a5-45a7-b2b1-0abb2decd9bb",
           "keyword": "3",
           "options": {
             "sensitive": false,
@@ -832,8 +832,8 @@
           "refSerialize": "741cd7b8654e06cc47783fa3ba233c53"
         },
         {
-          "ref": "ans_0c0c0d94-2fa4-4741-be81-afcddcd0158f",
-          "keyword": "key_708f9fe9-60fc-4fe8-896b-bccb037762cd",
+          "ref": "ans_2cc761f2-49b3-4674-9201-4794c4418846",
+          "keyword": "key_35a24f63-91a5-45a7-b2b1-0abb2decd9bb",
           "answer": "Fresas con crema (2 toppings + 1 salsa) es una buena elección!\n\nEscoje una *salsa* gratis\n\n1⃣ Leche Condensada\n2⃣ Arequipe\n3⃣ Chocolate Blanco\n4⃣ Chocolate Negro",
           "options": {
             "media": null,
@@ -847,11 +847,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "2441adae7b6a4b1c794085cb262d86a7"
+          "refSerialize": "05b7130ac92bc6a9ab63399b102634b0"
         },
         {
-          "ref": "ans_c0ddb2f8-d3a8-4322-81b9-fb4435934b48",
-          "keyword": "ans_0c0c0d94-2fa4-4741-be81-afcddcd0158f",
+          "ref": "ans_0140349d-5987-4ddf-ade2-d727863d121f",
+          "keyword": "ans_2cc761f2-49b3-4674-9201-4794c4418846",
           "answer": "Escoje una *segunda salsa* gratis",
           "options": {
             "media": null,
@@ -865,11 +865,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "ca0623993ff196876154b7fe58432bb9"
+          "refSerialize": "93edca68d3891b4e2d7ac15297c2d477"
         },
         {
-          "ref": "ans_e7507560-adea-4feb-89cc-43fbd666c195",
-          "keyword": "ans_c0ddb2f8-d3a8-4322-81b9-fb4435934b48",
+          "ref": "ans_7aec3fd0-6062-4ebd-90ef-ba60918abd74",
+          "keyword": "ans_0140349d-5987-4ddf-ade2-d727863d121f",
           "answer": "Escoge un Topping:\n1️.- Piazza\n2️.- Oreo\n3️.- Chips de chocolate\n4️.- Zucarita\n5️.- Maní triturado\n6️.- Masmelos\n7️.- Leche en polvo\n8️.- Lluvia de chocolate\n9️.- Fresa\n10️.- Granola\n11️.- Milo",
           "options": {
             "media": null,
@@ -883,11 +883,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "42256a1f65f4e0f03c6b38893c64d5b1"
+          "refSerialize": "5de3353e774c9968a45ec180cb538f79"
         },
         {
-          "ref": "ans_b6111f01-7c7a-40d1-acb7-d67f21575706",
-          "keyword": "ans_e7507560-adea-4feb-89cc-43fbd666c195",
+          "ref": "ans_8d3911e3-2d96-47bd-bed8-9b839a77f1fd",
+          "keyword": "ans_7aec3fd0-6062-4ebd-90ef-ba60918abd74",
           "answer": "Escoge un *segundo topping*",
           "options": {
             "media": null,
@@ -901,11 +901,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "a1917506469165e809f7ca7b5c929b5f"
+          "refSerialize": "75de0b6d5c5f11d171a3dcfbe948d218"
         },
         {
-          "ref": "ans_c65b3c9e-c301-45c0-ba9f-c3843589a78f",
-          "keyword": "ans_b6111f01-7c7a-40d1-acb7-d67f21575706",
+          "ref": "ans_7bd426e5-a71e-497a-996a-fccd10703b7f",
+          "keyword": "ans_8d3911e3-2d96-47bd-bed8-9b839a77f1fd",
           "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
           "options": {
             "media": null,
@@ -919,11 +919,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "5b03750f9c7ba0dba6e1ac386555de40"
+          "refSerialize": "83216ff3f4ee5b8608ef6cd411974970"
         },
         {
-          "ref": "ans_2019cf7f-5ccf-469c-8e2c-4ce0e47c9ec7",
-          "keyword": "ans_c65b3c9e-c301-45c0-ba9f-c3843589a78f",
+          "ref": "ans_bcdc1907-8543-45e3-9130-7375c5b6f67a",
+          "keyword": "ans_7bd426e5-a71e-497a-996a-fccd10703b7f",
           "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
           "options": {
             "media": null,
@@ -937,11 +937,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "c3ffb38808edeb6b903a91f86d7eaafb"
+          "refSerialize": "c5eabb3158d20287e48b9c334794c690"
         },
         {
-          "ref": "ans_df67f58e-bf95-4acb-b800-fa192598e939",
-          "keyword": "ans_2019cf7f-5ccf-469c-8e2c-4ce0e47c9ec7",
+          "ref": "ans_9795e141-c7b8-401c-8795-f17e091b0726",
+          "keyword": "ans_bcdc1907-8543-45e3-9130-7375c5b6f67a",
           "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
           "options": {
             "media": null,
@@ -955,11 +955,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "edda04b8179ded64d0e52a04a14f7e61"
+          "refSerialize": "c43adb6fe958506410e083073fdaa04a"
         },
         {
-          "ref": "ans_595e5cd9-2a1b-4110-b3d7-8cc824eeabdd",
-          "keyword": "ans_df67f58e-bf95-4acb-b800-fa192598e939",
+          "ref": "ans_55b67982-8d7b-4864-93e0-09e33ad1703c",
+          "keyword": "ans_9795e141-c7b8-401c-8795-f17e091b0726",
           "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
           "options": {
             "media": null,
@@ -973,11 +973,11 @@
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "d07fb195f0980c5a389d019aa3b399b5"
+          "refSerialize": "db10f303f9f9999ab87aa428f7d4d968"
         },
         {
-          "ref": "ans_db92a5b6-fb69-458a-8ca8-85c7523dd3e8",
-          "keyword": "ans_595e5cd9-2a1b-4110-b3d7-8cc824eeabdd",
+          "ref": "ans_314ab3cb-ce2e-4548-892e-a2d3ef11f3d7",
+          "keyword": "ans_55b67982-8d7b-4864-93e0-09e33ad1703c",
           "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
           "options": {
             "media": null,
@@ -989,13 +989,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "cb04700399347ac2bd013e9f133413a2"
+          "refSerialize": "a60eb6a2ea9f07aa7c71d72aae194fa0"
         },
         {
-          "ref": "ans_891c4409-cffe-4b65-a76b-a3acd34248fe",
-          "keyword": "ans_db92a5b6-fb69-458a-8ca8-85c7523dd3e8",
+          "ref": "ans_e658dc56-b849-49ce-ba91-1f63753abbc5",
+          "keyword": "ans_314ab3cb-ce2e-4548-892e-a2d3ef11f3d7",
           "answer": "Procesando...🍓",
           "options": {
             "media": null,
@@ -1007,13 +1007,13 @@
             "ref": null,
             "nested": [],
             "keyword": {},
-            "callback": false
+            "callback": true
           },
-          "refSerialize": "ade41bcbce780e4b269497ca4dcfccd7"
+          "refSerialize": "1dca4b2737b9a86333800a3ae055e52a"
         },
         {
-          "ref": "ans_3bf013c3-cfd8-44fd-b696-80b9547e89a1",
-          "keyword": "ans_891c4409-cffe-4b65-a76b-a3acd34248fe",
+          "ref": "ans_c3013bd0-0347-4132-be00-2caa01b815a2",
+          "keyword": "ans_e658dc56-b849-49ce-ba91-1f63753abbc5",
           "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
           "options": {
             "media": null,
@@ -1027,27 +1027,27 @@
             "keyword": {},
             "callback": false
           },
-          "refSerialize": "9815c89d90fee118816480deaa963fe4"
+          "refSerialize": "92d73aa1938fed1eda6e30d01b714fa3"
         }
       ],
       "keyword": {},
       "callback": false
     },
-    "refSerialize": "f0caf9ed078e70394716976822bffac0",
+    "refSerialize": "6ee1eeb7f9518e6f77d2a007803b7df2",
     "from": "56922465427"
   },
   {
-    "ref": "ee4c4d42-bbdc-4986-aa8c-e32ff1f9c408",
-    "keyword": "f0caf9ed078e70394716976822bffac0",
-    "answer": "1",
+    "ref": "320c4b6c-49d8-40ea-9c11-7067791d2619",
+    "keyword": "6ee1eeb7f9518e6f77d2a007803b7df2",
+    "answer": "5",
     "options": {},
     "from": "56922465427",
-    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+    "refSerialize": "d2b414a4bc0b3490276097c7513b4c8c"
   },
   {
-    "ref": "ans_002f37ac-44e9-4e8f-8328-ad61ad4e9a1e",
-    "keyword": "key_b5006160-c6db-4356-9e50-48434f01f57d",
-    "answer": "Fresas con crema tradicionales es una buena elección!\n\nEscoje una *salsa*\n\n1️⃣ Leche condensada\n2️⃣ Arequipe\n3️⃣ Leche condensada + Arequipe ($3000) Adicional",
+    "ref": "ans_cbf80e9b-3a6f-4879-aac0-f22bc4fa4b4e",
+    "keyword": "key_b32f88a8-b7c4-42c9-934d-8be5aedd77d9",
+    "answer": "Fresas con chocolate es una buena elección!\n\nEscoje una *salsa gratis*\n\n1⃣ Chocolate Blanco\n2⃣ Chocolate Negro\n3⃣ Combinado",
     "options": {
       "media": null,
       "buttons": [],
@@ -1060,21 +1060,21 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "9eacdaa18e2d80c2c50f75862af3c6a5",
+    "refSerialize": "f6bbb29efab769f3513f9e81250ad021",
     "from": "56922465427"
   },
   {
-    "ref": "ad68f3ba-04a8-4238-bb6b-50defcfec9e4",
-    "keyword": "9eacdaa18e2d80c2c50f75862af3c6a5",
+    "ref": "b9476962-2a8c-4fd4-8936-5b1007a96278",
+    "keyword": "f6bbb29efab769f3513f9e81250ad021",
     "answer": "2",
     "options": {},
     "from": "56922465427",
     "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
   },
   {
-    "ref": "60695937-b449-4b05-954d-e022cad1a9c7",
+    "ref": "a2ca5bc2-2f0f-435b-bc6f-344805b4005b",
     "keyword": null,
-    "answer": "Arequipe buena elección!!",
+    "answer": "Chocolate Negro buena elección!!",
     "options": {
       "media": null,
       "buttons": [],
@@ -1082,11 +1082,11 @@
       "delay": 0
     },
     "from": "56922465427",
-    "refSerialize": "d4b060425f839caa9f6a6f87345a4da9"
+    "refSerialize": "f52f3dd852d611453d08a20bfafd71c4"
   },
   {
-    "ref": "ans_4e1830f3-bb37-4cf9-9683-0f1ab8b6f928",
-    "keyword": "ans_002f37ac-44e9-4e8f-8328-ad61ad4e9a1e",
+    "ref": "ans_bc4a5c26-ead7-4764-955c-82ac5efdbf33",
+    "keyword": "ans_cbf80e9b-3a6f-4879-aac0-f22bc4fa4b4e",
     "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
     "options": {
       "media": null,
@@ -1100,21 +1100,21 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "070d0192476f676a2e391aec7c51b5a2",
+    "refSerialize": "fb4974bb6d7e440c5b5d9ac8f09856f3",
     "from": "56922465427"
   },
   {
-    "ref": "97d34c2d-ec65-4cf7-a519-3e26a8be650b",
-    "keyword": "070d0192476f676a2e391aec7c51b5a2",
+    "ref": "fee37e27-e233-4df2-bd0c-6554816833d1",
+    "keyword": "fb4974bb6d7e440c5b5d9ac8f09856f3",
     "answer": "1",
     "options": {},
     "from": "56922465427",
     "refSerialize": "290236b1d481a790a200ea6e94b2122a"
   },
   {
-    "ref": "905d7d56-ba39-4d65-b65a-b1e4342a2d20",
+    "ref": "304497d6-9f04-46b5-908e-4cf0454cb5e2",
     "keyword": null,
-    "answer": "Este es el *resumen del pedido:*\n\n*Producto*: Fresas con crema tradicionales\n*Salsas*: Arequipe\n*Extras*: Leche condensada\n*Total a cancelar:* $19.000",
+    "answer": "Este es el *resumen del pedido:*\n\n*Producto*: Fresas con chocolate\n*Salsas*: Chocolate Negro\n*Extras*: Leche condensada\n*Total a cancelar:* $18.000",
     "options": {
       "media": null,
       "buttons": [],
@@ -1122,11 +1122,11 @@
       "delay": 0
     },
     "from": "56922465427",
-    "refSerialize": "a68020abf34f5c8b521429a3cf9a7de3"
+    "refSerialize": "bd1cf4628ba297a609be7cd57f9118af"
   },
   {
-    "ref": "ans_48480a95-6917-48b0-ba2d-116debbfa3d7",
-    "keyword": "ans_4e1830f3-bb37-4cf9-9683-0f1ab8b6f928",
+    "ref": "ans_5b006029-01e4-4d2e-8f68-9d0ae1e3d13f",
+    "keyword": "ans_bc4a5c26-ead7-4764-955c-82ac5efdbf33",
     "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
     "options": {
       "media": null,
@@ -1140,20 +1140,20 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "0d82b768d0765abaebd4712d6ea1f1a5",
+    "refSerialize": "534079e2e12ae4fc012734f2cfe4ab87",
     "from": "56922465427"
   },
   {
-    "ref": "582eb741-7366-4ac5-8d89-9335b3f855bb",
-    "keyword": "0d82b768d0765abaebd4712d6ea1f1a5",
+    "ref": "f9caf122-a144-4ab3-b4f0-42b90220951a",
+    "keyword": "534079e2e12ae4fc012734f2cfe4ab87",
     "answer": "Pedir",
     "options": {},
     "from": "56922465427",
     "refSerialize": "f85f44e9c5bd1200d4aafd800d13c3a1"
   },
   {
-    "ref": "ans_3239572c-9ca8-422d-9596-4e72391dd517",
-    "keyword": "ans_48480a95-6917-48b0-ba2d-116debbfa3d7",
+    "ref": "ans_87a4c51b-2ad2-450e-ae24-56da55c8c55b",
+    "keyword": "ans_5b006029-01e4-4d2e-8f68-9d0ae1e3d13f",
     "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
     "options": {
       "media": null,
@@ -1167,21 +1167,21 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "7981ed3ff2919374b0a22c8b9c7bb82c",
+    "refSerialize": "d2776d33200a018762eda1b9159e45d1",
     "from": "56922465427"
   },
   {
-    "ref": "ff979d78-dba3-4779-9c86-e6a3a97c060f",
-    "keyword": "7981ed3ff2919374b0a22c8b9c7bb82c",
-    "answer": "Jd",
+    "ref": "1755151f-b503-442a-92da-0ca315ad9ade",
+    "keyword": "d2776d33200a018762eda1b9159e45d1",
+    "answer": "Aja",
     "options": {},
     "from": "56922465427",
-    "refSerialize": "49fe2c92e67610ed518b4e55ceb88be0"
+    "refSerialize": "460abeb8ac53d9d09f7d7b17911319c9"
   },
   {
-    "ref": "ab2ffa0b-70a1-4528-b8d5-82f83ef379b0",
+    "ref": "8209cfc2-ddcd-4167-8e51-16992faae284",
     "keyword": null,
-    "answer": "Genial, estos son los datos de entrega: Jd",
+    "answer": "Genial, estos son los datos de entrega: Aja",
     "options": {
       "media": null,
       "buttons": [],
@@ -1189,11 +1189,11 @@
       "delay": 0
     },
     "from": "56922465427",
-    "refSerialize": "183f98ba90cb595ddbe40f7c40c54a50"
+    "refSerialize": "e8ada547dfa2d2b19f4df18635f31c8f"
   },
   {
-    "ref": "ans_7551fc24-506e-47b2-b26f-e0d413dc2f09",
-    "keyword": "ans_3239572c-9ca8-422d-9596-4e72391dd517",
+    "ref": "ans_135458aa-e1e9-4ec4-906a-1befed4a5919",
+    "keyword": "ans_87a4c51b-2ad2-450e-ae24-56da55c8c55b",
     "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
     "options": {
       "media": null,
@@ -1207,21 +1207,21 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "756e1f0d5b0c177a6871ef0393de1af5",
+    "refSerialize": "0cf76ca8dde9fb635ab8414009607e01",
     "from": "56922465427"
   },
   {
-    "ref": "cc270343-268c-43f2-83d8-566cf0ec56d1",
-    "keyword": "756e1f0d5b0c177a6871ef0393de1af5",
-    "answer": "1",
+    "ref": "6658d4ae-c2f0-4ecd-804c-6a0f6660ce3c",
+    "keyword": "0cf76ca8dde9fb635ab8414009607e01",
+    "answer": "2",
     "options": {},
     "from": "56922465427",
-    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
   },
   {
-    "ref": "3a8d3369-310f-4757-bdf2-b713296516ef",
+    "ref": "0b875cb7-93ce-4ecd-a50c-f3a8d46f5f23",
     "keyword": null,
-    "answer": "Forma de pago: Efectivo",
+    "answer": "Forma de pago: undefined",
     "options": {
       "media": null,
       "buttons": [],
@@ -1229,11 +1229,11 @@
       "delay": 0
     },
     "from": "56922465427",
-    "refSerialize": "93f2264e2ffee65103ab6908239352e5"
+    "refSerialize": "195e0b4237ffbe57c389c17182f7d508"
   },
   {
-    "ref": "ans_3610a307-656a-42ae-a997-37ef1ce0b426",
-    "keyword": "ans_7551fc24-506e-47b2-b26f-e0d413dc2f09",
+    "ref": "ans_c2238242-c4c7-40d1-9062-e28e5e33adc7",
+    "keyword": "ans_135458aa-e1e9-4ec4-906a-1befed4a5919",
     "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
     "options": {
       "media": null,
@@ -1245,22 +1245,22 @@
       "ref": null,
       "nested": [],
       "keyword": {},
-      "callback": false
+      "callback": true
     },
-    "refSerialize": "d7882727cfff9c1a9a34838181fde77f",
+    "refSerialize": "119fc48f4235d2a0d31a1f3c38ee645d",
     "from": "56922465427"
   },
   {
-    "ref": "d7c597d3-3ab0-4498-a884-271e76880eae",
-    "keyword": "d7882727cfff9c1a9a34838181fde77f",
-    "answer": "Kd",
+    "ref": "640625ce-d190-438e-a67d-88236bc354cf",
+    "keyword": "119fc48f4235d2a0d31a1f3c38ee645d",
+    "answer": "Hola",
     "options": {},
     "from": "56922465427",
-    "refSerialize": "dbc0b8e5772394030dbafe40f0c6aa83"
+    "refSerialize": "c22e4066d61d81721def9b25d8a397e8"
   },
   {
-    "ref": "ans_0c320462-0450-4872-88c3-e597a7e9e71e",
-    "keyword": "ans_3610a307-656a-42ae-a997-37ef1ce0b426",
+    "ref": "ans_e8ae9ca3-92f0-4538-b65c-784329b65bd1",
+    "keyword": "ans_c2238242-c4c7-40d1-9062-e28e5e33adc7",
     "answer": "Procesando...🍓",
     "options": {
       "media": null,
@@ -1274,12 +1274,12 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "ba3b6f2c9beff2023727881b20cb5042",
+    "refSerialize": "546342071749c2279172d37c2c267c7f",
     "from": "56922465427"
   },
   {
-    "ref": "ans_f4ea7aa4-b480-432b-85fd-ca63b1615227",
-    "keyword": "ans_0c320462-0450-4872-88c3-e597a7e9e71e",
+    "ref": "ans_a54ae931-ed32-431f-b1d1-5c9360332bf5",
+    "keyword": "ans_e8ae9ca3-92f0-4538-b65c-784329b65bd1",
     "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
     "options": {
       "media": null,
@@ -1293,7 +1293,1036 @@
       "keyword": {},
       "callback": false
     },
-    "refSerialize": "650bd5805f25068df19a10ff36a5cd4b",
+    "refSerialize": "e2c63d93aef4c7a0ce7fb9b1734b1a01",
+    "from": "56922465427"
+  },
+  {
+    "ref": "ans_84cc3584-67ca-42b8-be98-a8891793fa6a",
+    "keyword": "key_ddd00fb1-3d80-4cb8-9239-3dbfdd8890bc",
+    "answer": "¡¡Hola hola!! ¡Bienvenidos a Fresata! La magia esta en nuestra crema\n Recuerda que los domicilios inician a partir de la 1:00 pm.\nUn gusto atenderte, ¿en que podemos colaborarte?",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "c5b96453b7ca0bf4b84dcceeac42950d",
+    "from": "56922465427"
+  },
+  {
+    "ref": "ans_6323adc2-1cb1-427f-afa6-1ceb26ee1cdd",
+    "keyword": "ans_84cc3584-67ca-42b8-be98-a8891793fa6a",
+    "answer": "Nuestra carta:\nSelecciona el *número* de su preferencia\n\n*1️⃣* Fresas con crema tradicionales - $16.000\n*2️⃣* Fresas con crema (1 topping + 1 salsa) - $18.500\n*3️⃣* Fresas con crema (2 toppings + 1 salsa) - $21.500\n*4️⃣* Fresas con crema y durazno - $18.000\n*5️⃣* Fresas con chocolate - $15.000\n*6️⃣* Bubol fresa - $10.000",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 1500,
+      "idle": null,
+      "ref": null,
+      "nested": [
+        {
+          "ref": "key_a4c2747a-9de3-433f-af2b-4057be8a751f",
+          "keyword": "1",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "065e0005da6e5c278a53691e53b48955"
+        },
+        {
+          "ref": "ans_20160824-c1c6-4ddd-9cec-edaf47d91ae9",
+          "keyword": "key_a4c2747a-9de3-433f-af2b-4057be8a751f",
+          "answer": "Fresas con crema tradicionales es una buena elección!\n\nEscoje una *salsa*\n\n1️⃣ Leche condensada\n2️⃣ Arequipe\n3️⃣ Leche condensada + Arequipe ($3000) Adicional",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "ab907f52e89feeac4bd7ba13db8219eb"
+        },
+        {
+          "ref": "ans_49a97422-d441-48b5-8be3-2fc84f7d4eac",
+          "keyword": "ans_20160824-c1c6-4ddd-9cec-edaf47d91ae9",
+          "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "432812070662baef76d8a0327d12cb7e"
+        },
+        {
+          "ref": "ans_dfa4167a-e090-471b-b181-6364dda14cd3",
+          "keyword": "ans_49a97422-d441-48b5-8be3-2fc84f7d4eac",
+          "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "b3fe3ad7655ba2629410e7ed38cef673"
+        },
+        {
+          "ref": "ans_20d5e728-84f7-4c7e-a9ba-fc606bc7115e",
+          "keyword": "ans_dfa4167a-e090-471b-b181-6364dda14cd3",
+          "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "883cfb0cf0004c034d1acf2e8a61ae3f"
+        },
+        {
+          "ref": "ans_0197b9b6-4b6a-4871-81d9-5e5236e89c2f",
+          "keyword": "ans_20d5e728-84f7-4c7e-a9ba-fc606bc7115e",
+          "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "8532bcc0023ced9ede590bd9fc1d6959"
+        },
+        {
+          "ref": "ans_950ed2ae-9d5a-4794-9105-989043feacc3",
+          "keyword": "ans_0197b9b6-4b6a-4871-81d9-5e5236e89c2f",
+          "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "3ba05e1960a697fbbe33590b44b3ce9c"
+        },
+        {
+          "ref": "ans_b6faef50-8d3e-4e30-b923-2cb2177e36e6",
+          "keyword": "ans_950ed2ae-9d5a-4794-9105-989043feacc3",
+          "answer": "Procesando...🍓",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "478129ccd2e5b5c5d3f79b31d747c656"
+        },
+        {
+          "ref": "ans_ccce3dda-2ca3-4f86-b5fb-ee12179f72d2",
+          "keyword": "ans_b6faef50-8d3e-4e30-b923-2cb2177e36e6",
+          "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 2000,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "95fa781797ea2e11cd06238fa12675ff"
+        },
+        {
+          "ref": "key_5207ad07-3792-4fe2-a5e2-844220c3013c",
+          "keyword": "4",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "fc09f52170be47fcb14a1cee9c5d3c52"
+        },
+        {
+          "ref": "ans_094082c4-a46d-42df-a5c7-5a907512c5bd",
+          "keyword": "key_5207ad07-3792-4fe2-a5e2-844220c3013c",
+          "answer": "Fresas con crema y durazno es una buena elección!\n\nEscoje una *salsa gratis*\n\n1⃣ Leche condensada\n2⃣ Arequipe\n3⃣ Chocolate Blanco\n4⃣ Chocolate Negro",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "aa8c075677751681af0eca9874579746"
+        },
+        {
+          "ref": "ans_6717b3c1-6b4f-4133-8d6b-acfe3c32378e",
+          "keyword": "ans_094082c4-a46d-42df-a5c7-5a907512c5bd",
+          "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "35b6ea047d30938930b72db0360b1834"
+        },
+        {
+          "ref": "ans_4cfcf348-fb0f-472a-aebf-fb756b0d459a",
+          "keyword": "ans_6717b3c1-6b4f-4133-8d6b-acfe3c32378e",
+          "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "25ac0e9709ff51184fb71b8e23900462"
+        },
+        {
+          "ref": "ans_748c7fbb-ab79-4258-93be-40075b45ca68",
+          "keyword": "ans_4cfcf348-fb0f-472a-aebf-fb756b0d459a",
+          "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "b9c39e68d3bcc6c6fb1edb502a8f28ed"
+        },
+        {
+          "ref": "ans_c153e8bf-4365-4b07-8658-b9d18391eb41",
+          "keyword": "ans_748c7fbb-ab79-4258-93be-40075b45ca68",
+          "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "5d9d5678a5db456898e37e6da4af48f1"
+        },
+        {
+          "ref": "ans_58894bf8-6b53-466d-affa-6edecb480f03",
+          "keyword": "ans_c153e8bf-4365-4b07-8658-b9d18391eb41",
+          "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "b5355afbe9dd20815ecca95e558652f6"
+        },
+        {
+          "ref": "ans_b7a5545b-2a65-4ab4-b7a4-d661d0099d7e",
+          "keyword": "ans_58894bf8-6b53-466d-affa-6edecb480f03",
+          "answer": "Procesando...🍓",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "e3bb57d39b6f859c025700cda5baed6e"
+        },
+        {
+          "ref": "ans_96253f4b-f8f9-4738-a516-de90fd4ad939",
+          "keyword": "ans_b7a5545b-2a65-4ab4-b7a4-d661d0099d7e",
+          "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 2000,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "c0813f21ce7d05ebea205a40229eb288"
+        },
+        {
+          "ref": "key_b32f88a8-b7c4-42c9-934d-8be5aedd77d9",
+          "keyword": "5",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "660d6f380cd3d2aa67431f161ba4eccf"
+        },
+        {
+          "ref": "ans_cbf80e9b-3a6f-4879-aac0-f22bc4fa4b4e",
+          "keyword": "key_b32f88a8-b7c4-42c9-934d-8be5aedd77d9",
+          "answer": "Fresas con chocolate es una buena elección!\n\nEscoje una *salsa gratis*\n\n1⃣ Chocolate Blanco\n2⃣ Chocolate Negro\n3⃣ Combinado",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "f6bbb29efab769f3513f9e81250ad021"
+        },
+        {
+          "ref": "ans_bc4a5c26-ead7-4764-955c-82ac5efdbf33",
+          "keyword": "ans_cbf80e9b-3a6f-4879-aac0-f22bc4fa4b4e",
+          "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "fb4974bb6d7e440c5b5d9ac8f09856f3"
+        },
+        {
+          "ref": "ans_5b006029-01e4-4d2e-8f68-9d0ae1e3d13f",
+          "keyword": "ans_bc4a5c26-ead7-4764-955c-82ac5efdbf33",
+          "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "534079e2e12ae4fc012734f2cfe4ab87"
+        },
+        {
+          "ref": "ans_87a4c51b-2ad2-450e-ae24-56da55c8c55b",
+          "keyword": "ans_5b006029-01e4-4d2e-8f68-9d0ae1e3d13f",
+          "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "d2776d33200a018762eda1b9159e45d1"
+        },
+        {
+          "ref": "ans_135458aa-e1e9-4ec4-906a-1befed4a5919",
+          "keyword": "ans_87a4c51b-2ad2-450e-ae24-56da55c8c55b",
+          "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "0cf76ca8dde9fb635ab8414009607e01"
+        },
+        {
+          "ref": "ans_c2238242-c4c7-40d1-9062-e28e5e33adc7",
+          "keyword": "ans_135458aa-e1e9-4ec4-906a-1befed4a5919",
+          "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "119fc48f4235d2a0d31a1f3c38ee645d"
+        },
+        {
+          "ref": "ans_e8ae9ca3-92f0-4538-b65c-784329b65bd1",
+          "keyword": "ans_c2238242-c4c7-40d1-9062-e28e5e33adc7",
+          "answer": "Procesando...🍓",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "546342071749c2279172d37c2c267c7f"
+        },
+        {
+          "ref": "ans_a54ae931-ed32-431f-b1d1-5c9360332bf5",
+          "keyword": "ans_e8ae9ca3-92f0-4538-b65c-784329b65bd1",
+          "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 2000,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "e2c63d93aef4c7a0ce7fb9b1734b1a01"
+        },
+        {
+          "ref": "key_2c1444b9-f3eb-45e4-a28d-abd9a70122d4",
+          "keyword": "6",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "ae093091123de34d8570657f16bd7343"
+        },
+        {
+          "ref": "ans_969f1b73-b64c-445a-8dc6-355b6026e3ec",
+          "keyword": "key_2c1444b9-f3eb-45e4-a28d-abd9a70122d4",
+          "answer": "Bubol fresa es una buena elección!",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "48035e995892bf3b838e24bb255db169"
+        },
+        {
+          "ref": "ans_5eaab13c-1297-412f-b432-940cfe4a1615",
+          "keyword": "ans_969f1b73-b64c-445a-8dc6-355b6026e3ec",
+          "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "14cfee62878c9e3bf09fceff1ba3b5be"
+        },
+        {
+          "ref": "ans_16e8a4b2-e32c-4f9d-86f6-8e05caedc0c6",
+          "keyword": "ans_5eaab13c-1297-412f-b432-940cfe4a1615",
+          "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "ce078e548c636d6b59a2ed524b63c25a"
+        },
+        {
+          "ref": "ans_c218d881-64ea-41da-85f8-5b35aefe40bd",
+          "keyword": "ans_16e8a4b2-e32c-4f9d-86f6-8e05caedc0c6",
+          "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "a16ecffa1d531df7c29f49cb380a8076"
+        },
+        {
+          "ref": "ans_1e9ade0f-753b-42f0-882b-d309f660159a",
+          "keyword": "ans_c218d881-64ea-41da-85f8-5b35aefe40bd",
+          "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "9e8683ef7c8dc00aa6516f1b3d6b4642"
+        },
+        {
+          "ref": "ans_7c9512c0-4051-4ce1-8649-c8b7d0ad8daf",
+          "keyword": "ans_1e9ade0f-753b-42f0-882b-d309f660159a",
+          "answer": "Procesando...🍓",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "535e33b2a048daa7c178e3e35be6d49e"
+        },
+        {
+          "ref": "ans_56546e75-0197-4963-9722-eecc4afd42ed",
+          "keyword": "ans_7c9512c0-4051-4ce1-8649-c8b7d0ad8daf",
+          "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 2000,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "1d485efe81ab3912dbb878646dcd6993"
+        },
+        {
+          "ref": "key_9f1cc138-6a09-4d33-93e8-259fd72a77a1",
+          "keyword": "2",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "900c9aa0094bfcca4a316ec66236e2fc"
+        },
+        {
+          "ref": "ans_58f74b84-173f-4303-9671-6d2c4f8295c4",
+          "keyword": "key_9f1cc138-6a09-4d33-93e8-259fd72a77a1",
+          "answer": "Fresas con crema (1 topping + 1 salsa) es una buena elección!\n\nEscoje una *salsa* gratis\n\n1⃣ Leche Condensada\n2⃣ Arequipe\n3⃣ Chocolate Blanco\n4⃣ Chocolate Negro",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "c82ecc7f2b6fc29077d5dfd27fa87e0e"
+        },
+        {
+          "ref": "ans_4113008a-afcf-40a9-94e7-43a142183690",
+          "keyword": "ans_58f74b84-173f-4303-9671-6d2c4f8295c4",
+          "answer": "Escoje una *segunda salsa* gratis",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "687e9192c8b49bbc2fb258175e6ec2f4"
+        },
+        {
+          "ref": "ans_9e1772d0-d141-4309-87b9-9293ba3fdce7",
+          "keyword": "ans_4113008a-afcf-40a9-94e7-43a142183690",
+          "answer": "Escoge un Topping:\n*1️.-* Piazza\n*2️.-* Oreo\n*3️.-* Chips de chocolate\n*4️.-* Zucarita\n*5️.-* Maní triturado\n*6️.-* Masmelos\n*7️.-* Leche en polvo\n*8️.-* Lluvia de chocolate\n*9️.-* Fresa\n*10️.-* Granola\n*11️.-* Milo",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "5c10c5ee5229ac0eb63f45a1dfa9819b"
+        },
+        {
+          "ref": "ans_304c859b-4e32-41de-bea5-ca7326395184",
+          "keyword": "ans_9e1772d0-d141-4309-87b9-9293ba3fdce7",
+          "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 1500,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "89b2e373d484609e053a9b16efc8573f"
+        },
+        {
+          "ref": "ans_454d6a4d-b0a0-4d38-b09e-bd365bce8db2",
+          "keyword": "ans_304c859b-4e32-41de-bea5-ca7326395184",
+          "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "a4bc524cca559be7f726c5d6fd07e367"
+        },
+        {
+          "ref": "ans_beb712c4-70e3-4b74-8f09-1d7b65b04134",
+          "keyword": "ans_454d6a4d-b0a0-4d38-b09e-bd365bce8db2",
+          "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "71d994b1230a887fcc8d77c73e1096cc"
+        },
+        {
+          "ref": "ans_b5220077-d2d2-469c-82d9-e41795af145d",
+          "keyword": "ans_beb712c4-70e3-4b74-8f09-1d7b65b04134",
+          "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "14dabaddce2cb0af80629d063d33d8cc"
+        },
+        {
+          "ref": "ans_b4bc00d1-1b1a-481a-bc5b-b7af965d57cc",
+          "keyword": "ans_b5220077-d2d2-469c-82d9-e41795af145d",
+          "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "b21d15b9bf8649ddabba88571c18fd5d"
+        },
+        {
+          "ref": "ans_ee8e48d2-c05e-4beb-8811-ae3a2d719b12",
+          "keyword": "ans_b4bc00d1-1b1a-481a-bc5b-b7af965d57cc",
+          "answer": "Procesando...🍓",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "9848a557bcb098ead11a1baad6cecc96"
+        },
+        {
+          "ref": "ans_56563035-7db9-4eed-a9be-9eb1234cfc0e",
+          "keyword": "ans_ee8e48d2-c05e-4beb-8811-ae3a2d719b12",
+          "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 2000,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "7d81eec654cbeb85e6199f21de54be8d"
+        },
+        {
+          "ref": "key_35a24f63-91a5-45a7-b2b1-0abb2decd9bb",
+          "keyword": "3",
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "741cd7b8654e06cc47783fa3ba233c53"
+        },
+        {
+          "ref": "ans_2cc761f2-49b3-4674-9201-4794c4418846",
+          "keyword": "key_35a24f63-91a5-45a7-b2b1-0abb2decd9bb",
+          "answer": "Fresas con crema (2 toppings + 1 salsa) es una buena elección!\n\nEscoje una *salsa* gratis\n\n1⃣ Leche Condensada\n2⃣ Arequipe\n3⃣ Chocolate Blanco\n4⃣ Chocolate Negro",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "05b7130ac92bc6a9ab63399b102634b0"
+        },
+        {
+          "ref": "ans_0140349d-5987-4ddf-ade2-d727863d121f",
+          "keyword": "ans_2cc761f2-49b3-4674-9201-4794c4418846",
+          "answer": "Escoje una *segunda salsa* gratis",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "93edca68d3891b4e2d7ac15297c2d477"
+        },
+        {
+          "ref": "ans_7aec3fd0-6062-4ebd-90ef-ba60918abd74",
+          "keyword": "ans_0140349d-5987-4ddf-ade2-d727863d121f",
+          "answer": "Escoge un Topping:\n1️.- Piazza\n2️.- Oreo\n3️.- Chips de chocolate\n4️.- Zucarita\n5️.- Maní triturado\n6️.- Masmelos\n7️.- Leche en polvo\n8️.- Lluvia de chocolate\n9️.- Fresa\n10️.- Granola\n11️.- Milo",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "5de3353e774c9968a45ec180cb538f79"
+        },
+        {
+          "ref": "ans_8d3911e3-2d96-47bd-bed8-9b839a77f1fd",
+          "keyword": "ans_7aec3fd0-6062-4ebd-90ef-ba60918abd74",
+          "answer": "Escoge un *segundo topping*",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "75de0b6d5c5f11d171a3dcfbe948d218"
+        },
+        {
+          "ref": "ans_7bd426e5-a71e-497a-996a-fccd10703b7f",
+          "keyword": "ans_8d3911e3-2d96-47bd-bed8-9b839a77f1fd",
+          "answer": "*Adicionales:*\n¿Quieres mas salsas o toppings por un costo adicional?\n\n*Salsas:*\n1️.- Leche condensada - $3.000\n2️.- Arequipe - $3.000\n3️.- Chocolate - $3.000\n4️.- Syrup de miel - $3.000\n\n*Toppings clasicos: $3.000*\n5️.- Piazza\n6️.- Oreo\n7️.- Chips de chocolate\n8️.- Zucarita\n9️.- Maní triturado\n10️.- Masmelos\n11️.- Leche en polvo\n12️.- Lluvia de chocolate\n13️.- Fresa\n14️.- Granola\n15️.- Milo\n\n*Toppings Premium: $4.000*\n16️.- Hersheys\n17️.- Brownie\n18️.- M&M\n19️.- Biscolata\n20️.- Gol\n21️.- Nutella\n22️.- Crema\n23️.- Chocolate blanco\n24️.- Durazno\n\n0.- No gracias",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 1500,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "83216ff3f4ee5b8608ef6cd411974970"
+        },
+        {
+          "ref": "ans_bcdc1907-8543-45e3-9130-7375c5b6f67a",
+          "keyword": "ans_7bd426e5-a71e-497a-996a-fccd10703b7f",
+          "answer": "Si está todo correcto escriba *pedir* para hacer su pedido",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "c5eabb3158d20287e48b9c334794c690"
+        },
+        {
+          "ref": "ans_9795e141-c7b8-401c-8795-f17e091b0726",
+          "keyword": "ans_bcdc1907-8543-45e3-9130-7375c5b6f67a",
+          "answer": "Porfavor indicanos los datos de entrega: Nombre, celular, dirección (En un solo Mensaje)",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "c43adb6fe958506410e083073fdaa04a"
+        },
+        {
+          "ref": "ans_55b67982-8d7b-4864-93e0-09e33ad1703c",
+          "keyword": "ans_9795e141-c7b8-401c-8795-f17e091b0726",
+          "answer": "Opciones de pago\n\n1️⃣ Efectivo\n2️⃣ Nequi\n3️⃣ QR del Negocio",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "db10f303f9f9999ab87aa428f7d4d968"
+        },
+        {
+          "ref": "ans_314ab3cb-ce2e-4548-892e-a2d3ef11f3d7",
+          "keyword": "ans_55b67982-8d7b-4864-93e0-09e33ad1703c",
+          "answer": "Por favor envíanos el comprobante o indique con cuanto cancela en efectivo",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "a60eb6a2ea9f07aa7c71d72aae194fa0"
+        },
+        {
+          "ref": "ans_e658dc56-b849-49ce-ba91-1f63753abbc5",
+          "keyword": "ans_314ab3cb-ce2e-4548-892e-a2d3ef11f3d7",
+          "answer": "Procesando...🍓",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 0,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "1dca4b2737b9a86333800a3ae055e52a"
+        },
+        {
+          "ref": "ans_c3013bd0-0347-4132-be00-2caa01b815a2",
+          "keyword": "ans_e658dc56-b849-49ce-ba91-1f63753abbc5",
+          "answer": "🍓Terminamos ✅ ¡Gracias por preferirnos! su pedido llegará enseguida🚀`✨",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": false,
+            "child": null,
+            "delay": 2000,
+            "idle": null,
+            "ref": null,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "92d73aa1938fed1eda6e30d01b714fa3"
+        }
+      ],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "6ee1eeb7f9518e6f77d2a007803b7df2",
     "from": "56922465427"
   }
 ]
