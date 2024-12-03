@@ -24,7 +24,13 @@ socket.on('new-order', (order) => {
     // Agregar el nuevo pedido al principio de la lista en el DOM
     const ordersList = document.getElementById('orders-list');
     const listItem = document.createElement('li');
-    listItem.textContent = `Producto: ${order.producto}, Pedido ID: ${order.id}, Fecha: ${order.fecha}, Fecha: ${order.estado}`;
+    listItem.textContent = `
+    ${order.producto}, 
+    ${order.salsas && `Salsas: ${order.salsas}`}, 
+    ${order.toppings && `Toppings: ${order.toppings}`}, 
+    ${order.extras && `Extras: ${order.extras}`},
+    Fecha: ${order.fecha}, 
+    Estado: ${order.estado}`;
 
     // Insertar el nuevo elemento al inicio de la lista
     if (ordersList.firstChild) {

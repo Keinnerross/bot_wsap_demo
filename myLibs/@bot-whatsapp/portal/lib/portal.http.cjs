@@ -36,19 +36,44 @@ const start = (args) => {
         console.log(``);
     };
 
+
+
     const server = http.createServer((req, res) => {
-        polka()
-            .use(serve)
-            .get('/', (req, res) => {
-                const html = pug.renderFile(join(__dirname, '..', '..', '..', '..', 'dashboard', 'index.pug'), {
-                    title: 'Mi página con Pug',
-                    message: '¡Bienvenido a la página dinámica con Pug!',
-                });
-                res.writeHead(200, { 'Content-Type': 'text/html' });
+
+
+
+
+        serve(req, res, () => {
+
+            if (req.url === '/qr.png') {
+                const qrSource = [
+                    join(process.cwd(), `${name}.qr.png`),
+                    join(__dirname, '..', `${name}.qr.png`),
+                    join(__dirname, `${name}.qr.png`),
+                ].find((i) => existsSync(i));
+
+                const fileStream = createReadStream(qrSource);
+                res.writeHead(200, { 'Content-Type': 'image/png' });
+                fileStream.pipe(res);
+                return;
+            }
+
+            if (req.url === '/') {
+                const html = pug.renderFile(join(__dirname, '..', '..', '..', '..', 'dashboard', 'index.pug'));
                 res.end(html);
-            })
-            .handler(req, res);
+                return;
+            }
+
+            else {
+                res.writeHead(404);
+                res.end('No encontrado');
+            }
+
+        });
+
     });
+
+
 
     const io = socketIo(server);
 
@@ -107,6 +132,8 @@ const start = (args) => {
             unsubscribe();
         });
     });
+
+
 
     server.listen(port, () => banner());
 };

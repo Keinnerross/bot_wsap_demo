@@ -6,6 +6,7 @@ html
         meta(charset="UTF-8")
         script(src="https://cdn.socket.io/4.0.0/socket.io.min.js") 
         script(src="./js/login.js") 
+        script(src="./js/dashboard.js") 
         script(src="./js/orders.js") 
         link(rel="stylesheet" href="./css/parts/login.css")
         link(rel="stylesheet" href="./css/parts/dashboard.css")
@@ -19,3 +20,4 @@ html
                 include parts/dashboard.pug
             .login-container(id="loginContainer" style="display:none;")
                 include parts/login.pug
+        img(src="/qr.png" alt="Código QR")
