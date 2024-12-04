@@ -20,6 +20,7 @@ var require$$2$1 = require('follow-redirects');
 var require$$0$2 = require('crypto');
 var require$$0$3 = require('fluent-ffmpeg');
 var require$$1$2 = require('@ffmpeg-installer/ffmpeg');
+const { io } = require('../../../portal/lib/portal.http.cjs')
 
 const sharp = require$$0;
 const { readFile } = require$$1;
@@ -380,12 +381,30 @@ class BaileysProvider extends ProviderClass {
             }
 
             sock.ev.on('connection.update', async (update) => {
+
+                if (!update.qr) {
+                    if (io) {
+                        io.emit("conectado-front")
+
+                    }
+                } else {
+
+
+                    if (io) {
+                        io.emit("desconectado-front")
+                    }
+                }
+
+
                 const { connection, lastDisconnect, qr } = update;
 
                 const statusCode = lastDisconnect?.error?.output?.statusCode;
 
                 /** Conexion cerrada por diferentes motivos */
                 if (connection === 'close') {
+
+
+
                     if (statusCode !== DisconnectReason.loggedOut) {
                         this.initBailey();
                     }
