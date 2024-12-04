@@ -1,7 +1,7 @@
 'use strict';
 
 const { join } = require('path');
-const { createReadStream, existsSync } = require('fs');
+const { createReadStream, existsSync, watchFile } = require('fs');
 const { bgYellow, cyan, yellow } = require('kleur');
 const polka = require('polka');
 const http = require('http');
@@ -36,15 +36,8 @@ const start = (args) => {
         console.log(``);
     };
 
-
-
     const server = http.createServer((req, res) => {
-
-
-
-
         serve(req, res, () => {
-
             if (req.url === '/qr.png') {
                 const qrSource = [
                     join(process.cwd(), `${name}.qr.png`),
@@ -52,8 +45,19 @@ const start = (args) => {
                     join(__dirname, `${name}.qr.png`),
                 ].find((i) => existsSync(i));
 
+                if (!qrSource) {
+                    res.writeHead(404);
+                    res.end('QR no encontrado');
+                    return;
+                }
+
                 const fileStream = createReadStream(qrSource);
-                res.writeHead(200, { 'Content-Type': 'image/png' });
+                res.writeHead(200, { 
+                    'Content-Type': 'image/png',
+                    'Cache-Control': 'no-store', // Evita caché
+                    'Pragma': 'no-cache', // Evita caché
+                    'Expires': '0' // Expiración inmediata
+                });
                 fileStream.pipe(res);
                 return;
             }
@@ -64,16 +68,17 @@ const start = (args) => {
                 return;
             }
 
-            else {
-                res.writeHead(404);
-                res.end('No encontrado');
-            }
-
+            res.writeHead(404);
+            res.end('No encontrado');
         });
-
     });
 
-
+    // Usamos fs.watchFile fuera de 'io.on' para que se ejecute una sola vez
+    const qrPath = join(process.cwd(), `${name}.qr.png`);
+    watchFile(qrPath, { interval: 100 }, () => {
+        console.log('El archivo qr.png ha cambiado');
+        io.emit('qr-updated'); // Emite un evento cuando se actualiza el archivo
+    });
 
     const io = socketIo(server);
 
@@ -110,7 +115,6 @@ const start = (args) => {
 
         // Escuchar cambios en la colección 'pedidos' en Firestore
         const pedidosRef = db.collection('pedidos');
-
         const unsubscribe = pedidosRef.onSnapshot((snapshot) => {
             if (!currentUser) return; // No emitir eventos si no hay usuario autenticado
 
@@ -132,8 +136,6 @@ const start = (args) => {
             unsubscribe();
         });
     });
-
-
 
     server.listen(port, () => banner());
 };
