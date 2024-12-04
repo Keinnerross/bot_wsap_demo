@@ -64,6 +64,9 @@ const io = socketIo(server);
 io.on('connection', (socket) => {
     console.log('Socket conectado');
 
+//preguntar a bayleis
+
+
     const STATIC_USERNAME = 'admin';
     const STATIC_PASSWORD = '123456';
 

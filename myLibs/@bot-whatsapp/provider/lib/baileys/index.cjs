@@ -306,6 +306,40 @@ const logger = new Console({
     stdout: createWriteStream(`${process.cwd()}/baileys.log`),
 });
 
+const checkBaileyConnection = async () => {
+    try {
+        // Estado de autenticación
+        const NAME_DIR_SESSION = 'bot_sessions'; // Define el nombre para las sesiones
+        const { state } = await useMultiFileAuthState(NAME_DIR_SESSION);
+        const keyVal = state.creds.me ? true : false;
+        console.log(keyVal ? state.creds.me : "no papi")
+
+        if (keyVal) {
+            if (io) {
+                io.emit("conectado-front");
+                console.log("Conectao");
+            }
+        } else {
+            if (io) {
+                io.emit("desconectado-front");
+                console.log("Nanaikukas");
+            }
+        }
+    } catch (error) {
+        console.error("Error en la conexión de Bailey:", error);
+        // Aquí puedes manejar el error, como emitir un evento o hacer un log detallado
+        if (io) {
+            io.emit("error-bailey");
+        }
+    }
+}
+
+io.on('connection', (socket) => {
+    checkBaileyConnection();
+});
+
+
+
 /**
  * ⚙️ BaileysProvider: Es una clase tipo adaptor
  * que extiende clases de ProviderClass (la cual es como interfaz para sber que funciones rqueridas)
@@ -323,15 +357,21 @@ class BaileysProvider extends ProviderClass {
         this.initBailey().then();
     }
 
-    /**
-     * Iniciar todo Bailey
-     */
+
+
+
+
+
     initBailey = async () => {
         const NAME_DIR_SESSION = `${this.globalVendorArgs.name}_sessions`;
         const { state, saveCreds } = await useMultiFileAuthState(NAME_DIR_SESSION);
         const loggerBaileys = pino({ level: 'fatal' });
-
         this.saveCredsGlobal = saveCreds;
+
+
+
+
+
 
         this.store = makeInMemoryStore({ loggerBaileys });
         this.store.readFromFile(`${NAME_DIR_SESSION}/baileys_store.json`);
@@ -380,6 +420,8 @@ class BaileysProvider extends ProviderClass {
                 }
             }
 
+
+
             sock.ev.on('connection.update', async (update) => {
 
                 if (!update.qr) {
@@ -402,7 +444,6 @@ class BaileysProvider extends ProviderClass {
 
                 /** Conexion cerrada por diferentes motivos */
                 if (connection === 'close') {
-
 
 
                     if (statusCode !== DisconnectReason.loggedOut) {
@@ -455,6 +496,7 @@ class BaileysProvider extends ProviderClass {
             ]);
         }
     }
+
 
     /**
      * Mapeamos los eventos nativos a los que la clase Provider espera

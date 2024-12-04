@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         qrImg.src = "/qr.png";
     });
 
+
+    
     socket.on('conectado-front', () => {
         const conectadoContainer = document.querySelector('.conectado-container');
         conectadoContainer.innerHTML = '<p>Conectado</p>';
@@ -33,9 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
         const conectadoContainer = document.querySelector('.conectado-container');
         conectadoContainer.innerHTML = '<p>Desconectado</p>';
     });
-
-
-
-
 
 });
