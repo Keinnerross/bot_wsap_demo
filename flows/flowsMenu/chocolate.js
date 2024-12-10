@@ -23,7 +23,7 @@ const salsas = [
 
 const chocolate = addKeyword("5").addAnswer([`${menuChossed.producto} es una buena elección!`,
     "",
-    "Escoje una *salsa gratis*",
+    "Escoge una *salsa gratis*",
     "",
 ...salsas.map((salsa, index) => `${index + 1}\u20E3 ${salsa}`)
 ],

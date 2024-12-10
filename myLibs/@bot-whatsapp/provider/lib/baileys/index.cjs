@@ -312,17 +312,22 @@ const checkBaileyConnection = async () => {
         const NAME_DIR_SESSION = 'bot_sessions'; // Define el nombre para las sesiones
         const { state } = await useMultiFileAuthState(NAME_DIR_SESSION);
         const keyVal = state.creds.me ? true : false;
-        console.log(keyVal ? state.creds.me : "no papi")
+        // console.log(keyVal ? state.creds.me : "No hay Credenciales")
 
         if (keyVal) {
             if (io) {
-                io.emit("conectado-front");
-                console.log("Conectao");
+                setTimeout(() => {
+                    io.emit("conectado-front");
+                    console.log("Wsap Conectado");
+                }, 2000)
+
             }
         } else {
             if (io) {
-                io.emit("desconectado-front");
-                console.log("Nanaikukas");
+                setTimeout(() => {
+                    io.emit("desconectado-front");
+                    console.log("Wsap Desconectado");
+                }, 2000)
             }
         }
     } catch (error) {

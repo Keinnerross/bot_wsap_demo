@@ -23,7 +23,7 @@ const salsas = [
 
 const tradicionales = addKeyword("1").addAnswer([`${menuChossed.producto} es una buena elección!`,
     "",
-    "Escoje una *salsa*",
+    "Escoge una *salsa*",
     "",
 ...salsas.map((salsa, index) => `${index + 1}\u20E3 ${salsa}`)],
     {

@@ -21,7 +21,7 @@ const salsas = [
 
 const cremaDuraznos = addKeyword("4").addAnswer([`${menuChossed.producto} es una buena elección!`,
     "",
-    "Escoje una *salsa gratis*",
+    "Escoge una *salsa gratis*",
     "",
 ...salsas.map((salsa, index) => `${index + 1}\u20E3 ${salsa}`)
 ],

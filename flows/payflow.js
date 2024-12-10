@@ -1,4 +1,3 @@
-const { delay } = require('@whiskeysockets/baileys');
 const db = require('../firebase');
 const formatDate = require('./utils/formatDate');
 
@@ -86,7 +85,7 @@ const generarPedido = {
         async function enviarPedido() {
             const docRef = db.collection('pedidos').doc();
             await docRef.set(pedido);  // Guarda el pedido en la base de datos
-            console.log('Pedido enviado a la base de datos.');
+            
 
         }
 

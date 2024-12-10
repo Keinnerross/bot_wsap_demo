@@ -1,5 +1,6 @@
 'use strict';
-
+const fs = require('fs');
+const path = require('path'); 
 const { join } = require('path');
 const { createReadStream, existsSync, watchFile } = require('fs');
 const { bgYellow, cyan, yellow } = require('kleur');
@@ -11,11 +12,12 @@ const db = require('../../../../firebase.js'); // Asegúrate de que db esté ini
 const jwt = require('jsonwebtoken'); // Importar jsonwebtoken
 const cookieParser = require('cookie-parser'); // Importar cookie-parser
 
+
 const HTTP_PORT = process.env.PORT || 4000;
 const QR_FILE = process.env.QR_FILE ?? 'bot';
 const PUBLIC_URL = process.env.PUBLIC_URL ?? process.env.RAILWAY_STATIC_URL ?? 'http://localhost';
 
-const dir = [join(__dirname, 'dashboard'), join(__dirname, '..', '..', '..', '..', 'dashboard')].find((i) =>
+const dir = [join(__dirname, 'out'), join(__dirname, '..', '..', '..', '..', 'out')].find((i) =>
     existsSync(i)
 );
 const serve = serveStatic(dir);
@@ -53,13 +55,34 @@ const server = http.createServer((req, res) => {
         }
 
         if (req.url === '/') {
-            const html = pug.renderFile(join(__dirname, '..', '..', '..', '..', 'dashboard', 'index.pug'));
-            res.end(html);
+            const filePath = path.join(__dirname, '..', '..', '..', '..', 'out', 'index.html');
+            
+            fs.readFile(filePath, 'utf8', (err, data) => {
+                if (err) {
+                    res.statusCode = 500;
+                    res.end('Error al leer el archivo.');
+                    return;
+                }
+                res.end(data);
+            });
             return;
         }
 
-        res.writeHead(404);
-        res.end('No encontrado');
+        if (req.url === '/dashboard') {
+            const filePath = path.join(__dirname, '..', '..', '..', '..', 'out', 'dashboard.html');
+            
+            fs.readFile(filePath, 'utf8', (err, data) => {
+                if (err) {
+                    res.statusCode = 500;
+                    res.end('Error al leer el archivo.');
+                    return;
+                }
+                res.end(data);
+            });
+            return;
+        }
+
+       
     });
 });
 

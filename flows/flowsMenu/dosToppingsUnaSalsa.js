@@ -27,7 +27,7 @@ const salsas = [
 
 const dosToppingsUnaSalsa = addKeyword(bodyEntry.toString()).addAnswer([`${menuChossed.producto} es una buena elección!`,
     "",
-    "Escoje una *salsa* gratis",
+    "Escoge una *salsa* gratis",
     "",
 ...salsas.map((salsa, index) => `${index + 1}\u20E3 ${salsa}`)
 ],
@@ -60,7 +60,7 @@ const dosToppingsUnaSalsa = addKeyword(bodyEntry.toString()).addAnswer([`${menuC
         }
 
     }
-).addAnswer(["Escoje una *segunda salsa* gratis"],
+).addAnswer(["Escoge una *segunda salsa* gratis"],
     {
         capture: true,
     },

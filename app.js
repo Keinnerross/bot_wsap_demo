@@ -22,7 +22,6 @@ const main = async () => {
     const adapterDB = new JsonFileAdapter()
     const adapterFlow = createFlow([flowWelcome, flowThanks])
     const adapterProvider = createProvider(BaileysProvider)
-    const baileys = new BaileysProvider();
 
 
 
