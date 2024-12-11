@@ -1,7 +1,9 @@
 'use strict';
 
 const { join } = require('path');
-const { createReadStream, existsSync, watchFile } = require('fs');
+const { createReadStream, existsSync, watchFile, } = require('fs');
+const fs = require('fs');
+const path = require('path');
 const { bgYellow, cyan, yellow } = require('kleur');
 const pug = require('pug');
 const http = require('http');
@@ -15,7 +17,7 @@ const HTTP_PORT = process.env.PORT || 4000;
 const QR_FILE = process.env.QR_FILE ?? 'bot';
 const PUBLIC_URL = process.env.PUBLIC_URL ?? process.env.RAILWAY_STATIC_URL ?? 'http://localhost';
 
-const dir = [join(__dirname, 'dashboard'), join(__dirname, '..', '..', '..', '..', 'dashboard')].find((i) =>
+const dir = [join(__dirname, 'out'), join(__dirname, '..', '..', '..', '..', 'out')].find((i) =>
     existsSync(i)
 );
 const serve = serveStatic(dir);
@@ -53,10 +55,39 @@ const server = http.createServer((req, res) => {
         }
 
         if (req.url === '/') {
-            const html = pug.renderFile(join(__dirname, '..', '..', '..', '..', 'dashboard', 'index.pug'));
-            res.end(html);
+            const filePath = path.join(__dirname, '..', '..', '..', '..', 'out', 'index.html');
+
+            // Leer el archivo HTML y enviarlo como respuesta
+            fs.readFile(filePath, 'utf-8', (err, html) => {
+                if (err) {
+                    res.statusCode = 500;
+                    res.end('Error al cargar la página.');
+                    return;
+                }
+                res.setHeader('Content-Type', 'text/html');
+                res.end(html);
+            });
             return;
         }
+
+        if (req.url === '/dashboard') {
+            const filePath = path.join(__dirname, '..', '..', '..', '..', 'out', 'dashboard.html');
+
+            // Leer el archivo HTML para el dashboard y enviarlo como respuesta
+            fs.readFile(filePath, 'utf-8', (err, html) => {
+                if (err) {
+                    res.statusCode = 500;
+                    res.end('Error al cargar el dashboard.');
+                    return;
+                }
+                res.setHeader('Content-Type', 'text/html');
+                res.end(html);
+            });
+            return;
+        }
+
+
+
 
         res.writeHead(404);
         res.end('No encontrado');
@@ -65,7 +96,7 @@ const server = http.createServer((req, res) => {
 
 const io = socketIo(server, {
     cors: {
-        origin: "http://localhost:3000", //Direccion front
+        origin: PUBLIC_URL,
         methods: ["GET", "POST"],
         allowedHeaders: ["Content-Type"],
         credentials: true,
@@ -79,17 +110,17 @@ io.on('connection', async (socket) => {
 
 
 
+    const STATIC_USERNAME = process.env.STATIC_USERNAME;
+    const STATIC_PASSWORD = process.env.STATIC_PASSWORD;
+    const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 
-
-    const STATIC_USERNAME = 'admin';
-    const STATIC_PASSWORD = '123456';
 
     socket.on('login', async (data) => {
         const { username, password } = data;
 
         if (username === STATIC_USERNAME && password === STATIC_PASSWORD) {
-            // Generar un token JWT
-            const token = jwt.sign({ username }, 'your-secret-key', { expiresIn: '15h' });
+            // Generar un token JWT usando el valor del archivo .env
+            const token = jwt.sign({ username }, JWT_SECRET_KEY, { expiresIn: '15h' });
 
             // Enviar el token como una cookie
             socket.emit('login-success', { message: 'Login exitoso', token });
@@ -103,8 +134,6 @@ io.on('connection', async (socket) => {
             const pedidos = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
             socket.emit('get-orders', pedidos);
-
-
         } else {
             socket.emit('login-error', { message: 'Usuario o contraseña incorrectos' });
         }
@@ -115,7 +144,7 @@ io.on('connection', async (socket) => {
 
         if (token) {
             // Verificar el token
-            jwt.verify(token, 'your-secret-key', (err, decoded) => {
+            jwt.verify(token, JWT_SECRET_KEY, (err, decoded) => {
                 if (err) {
                     socket.emit('auth-status', { authenticated: false });
                 } else {
@@ -144,7 +173,7 @@ io.on('connection', async (socket) => {
 
 
 
-    let lastDocumentSnapshot = null; // Variable para guardar el último snapshot procesado
+    let lastDocumentSnapshot = null; // Variable para guardar el último snapshot procesado necesario para el new-order
 
     pedidosRef
         .orderBy('numeroDeOrden', 'desc')  // Ordena por 'numeroDeOrden' de forma descendente
