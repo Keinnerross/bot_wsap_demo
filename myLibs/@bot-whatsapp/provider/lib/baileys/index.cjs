@@ -309,16 +309,15 @@ const logger = new Console({
 const checkBaileyConnection = async () => {
     try {
         // Estado de autenticación
-        const NAME_DIR_SESSION = 'bot_sessions'; // Define el nombre para las sesiones
+        const NAME_DIR_SESSION = 'bot_sessions';
         const { state } = await useMultiFileAuthState(NAME_DIR_SESSION);
         const keyVal = state.creds.me ? true : false;
-        // console.log(keyVal ? state.creds.me : "No hay Credenciales")
 
         if (keyVal) {
             if (io) {
                 setTimeout(() => {
                     io.emit("conectado-front");
-                    console.log("Wsap Conectado");
+                    // console.log("Wsap Conectado");
                 }, 2000)
 
             }
@@ -326,13 +325,12 @@ const checkBaileyConnection = async () => {
             if (io) {
                 setTimeout(() => {
                     io.emit("desconectado-front");
-                    console.log("Wsap Desconectado");
+                    // console.log("Wsap Desconectado");
                 }, 2000)
             }
         }
     } catch (error) {
         console.error("Error en la conexión de Bailey:", error);
-        // Aquí puedes manejar el error, como emitir un evento o hacer un log detallado
         if (io) {
             io.emit("error-bailey");
         }

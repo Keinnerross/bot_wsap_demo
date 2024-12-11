@@ -59,7 +59,7 @@ const validacionComprobante = {
     answer: 'Por favor envíanos el comprobante o indica con cuánto cancelas en efectivo',
     logic: async (ctx, { state }) => {
         await state.update({ comprobante: ctx.body })
-    }
+    }   
 }
 
 
@@ -69,6 +69,8 @@ const generarPedido = {
     answer: 'Procesando...🍓',
     logic: async (ctx, { state, flowDynamic }) => {
         const myState = state.getMyState();
+
+        const numeroDeWhatsapp = ctx.from;
 
         const pedido = {
             producto: myState.producto,
@@ -81,6 +83,7 @@ const generarPedido = {
             datosEntrega: myState.datosEntrega,
             estado: "En proceso",
             cuenta: `$${myState.cuenta.toLocaleString()}`,
+            whatsapp: numeroDeWhatsapp
         };
 
         async function enviarPedido() {

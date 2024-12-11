@@ -72,6 +72,7 @@ const io = socketIo(server, {
     },
 });
 
+
 // Configurar eventos de Socket.IO
 io.on('connection', async (socket) => {
     console.log('Socket conectado');
@@ -94,7 +95,11 @@ io.on('connection', async (socket) => {
             socket.emit('login-success', { message: 'Login exitoso', token });
 
             const pedidosRef = db.collection('pedidos');
-            const snapshot = await pedidosRef.orderBy('fecha', 'desc').get();
+            const snapshot = await pedidosRef
+                .orderBy('numeroDeOrden', 'desc')
+                .limit(30)
+                .get();
+
             const pedidos = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
             socket.emit('get-orders', pedidos);
@@ -125,16 +130,45 @@ io.on('connection', async (socket) => {
 
 
     const pedidosRef = db.collection('pedidos');
-    const snapshot = await pedidosRef.orderBy('fecha', 'desc').get();
+    const snapshot = await pedidosRef
+        .orderBy('numeroDeOrden', 'desc')
+        .limit(30)
+        .get();
+
     const pedidos = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
     socket.emit('get-orders', pedidos);
 
+
+
+
+
+
+    let lastDocumentSnapshot = null; // Variable para guardar el último snapshot procesado
+
     pedidosRef
-        .orderBy('fecha', 'desc') // Ordena los pedidos por fecha, en orden descendente (más recientes primero)
+        .orderBy('numeroDeOrden', 'desc')  // Ordena por 'numeroDeOrden' de forma descendente
+        .limit(30)  // Limita la consulta a los primeros 30 documentos
         .onSnapshot(snapshot => {
-            const updatedOrders = snapshot.docs.map(doc => doc.data());
-            io.emit('new-order', updatedOrders); // Emite las órdenes actualizadas a todos los clientes
+            if (!lastDocumentSnapshot) {
+                // Si es la primera vez, emitir los primeros 30 documentos
+                const allOrders = snapshot.docs.map(doc => doc.data());
+                socket.emit('new-order', allOrders);
+                lastDocumentSnapshot = snapshot;
+                return;
+            }
+
+            // Detecta si hay nuevos documentos comparando con el snapshot anterior
+            const hasNewDocs = snapshot.docs.some(
+                doc => !lastDocumentSnapshot.docs.some(prevDoc => prevDoc.id === doc.id)
+            );
+
+            if (hasNewDocs) {
+                const allOrders = snapshot.docs.map(doc => doc.data());
+                socket.emit('new-order', allOrders);
+            }
+
+            lastDocumentSnapshot = snapshot;
         });
 
 
@@ -150,16 +184,14 @@ io.on('connection', async (socket) => {
                 return;
             }
 
-            // Actualiza el campo estado del documento encontrado
             snapshot.forEach(async (doc) => {
                 await pedidosRef.doc(doc.id).update({
                     estado: newState,
                 });
-                console.log(`Estado actualizado a "${newState}" para el pedido con número de orden ${orderNumber}.`);
+
             });
 
-            // Emitir una notificación para informar a los clientes que la orden ha sido actualizada
-            io.emit('order-updated', { orderNumber, newState });
+            socket.emit('order-updated', { orderNumber, newState });
 
         } catch (error) {
             console.error('Error al actualizar el pedido:', error);
