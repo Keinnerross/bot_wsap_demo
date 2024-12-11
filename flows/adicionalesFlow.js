@@ -75,6 +75,7 @@ const adicionalesLogic = async (ctx, { flowDynamic, state, fallBack }) => {
     let resume = [
         "Este es el *resumen del pedido:*",
         "",
+        myState.producto && `*Producto:* ${myState.producto}`,
         myState.salsas && `*Salsas:* ${myState.salsas}`,
         myState.toppings && `*Toppings:* ${myState.toppings}`,
         myState.extras && `*Extras:* ${myState.extras}`,

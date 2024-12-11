@@ -78,14 +78,30 @@ const generarPedido = {
             metodoPago: myState.metodoPago,
             comprobante: myState.comprobante,
             fecha: formatDate(new Date()),
+            datosEntrega: myState.datosEntrega,
             estado: "En proceso",
             cuenta: `$${myState.cuenta.toLocaleString()}`,
         };
 
         async function enviarPedido() {
+            const counterRef = db.collection('counters').doc('ordenesCounter'); // Referencia al documento del contador
+            const counterDoc = await counterRef.get();
+
+            let orderNumber = 1;
+
+            if (counterDoc.exists) {
+                const currentCounter = counterDoc.data();
+                orderNumber = currentCounter.lastOrderNumber + 1; // Incrementamos el número de orden
+            }
+
+            pedido.numeroDeOrden = orderNumber;
+
             const docRef = db.collection('pedidos').doc();
-            await docRef.set(pedido);  // Guarda el pedido en la base de datos
-            
+            await docRef.set(pedido);
+
+            await counterRef.set({
+                lastOrderNumber: orderNumber
+            }, { merge: true });
 
         }
 

@@ -137,6 +137,37 @@ io.on('connection', async (socket) => {
             io.emit('new-order', updatedOrders); // Emite las órdenes actualizadas a todos los clientes
         });
 
+
+
+    socket.on('update-order', async (data) => {
+        const { orderNumber, newState } = data;
+
+        try {
+            const snapshot = await pedidosRef.where('numeroDeOrden', '==', orderNumber).get();
+
+            if (snapshot.empty) {
+                console.log('No se encontró ningún  pedido con ese número de orden.');
+                return;
+            }
+
+            // Actualiza el campo estado del documento encontrado
+            snapshot.forEach(async (doc) => {
+                await pedidosRef.doc(doc.id).update({
+                    estado: newState,
+                });
+                console.log(`Estado actualizado a "${newState}" para el pedido con número de orden ${orderNumber}.`);
+            });
+
+            // Emitir una notificación para informar a los clientes que la orden ha sido actualizada
+            io.emit('order-updated', { orderNumber, newState });
+
+        } catch (error) {
+            console.error('Error al actualizar el pedido:', error);
+        }
+    });
+
+
+
     socket.on('disconnect', () => {
         console.log('Socket desconectado');
     });
