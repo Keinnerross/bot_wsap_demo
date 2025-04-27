@@ -409,7 +409,6 @@ class BaileysProvider extends ProviderClass {
                         instructions: [
                             `Acepta la notificación del WhatsApp ${this.globalVendorArgs.phoneNumber} en tu celular 👌`,
                             `El token para la vinculación es: ${code}`,
-                            `Necesitas ayuda: https://link.codigoencasa.com/DISCORD`,
                         ],
                     });
                 } else {
@@ -417,8 +416,6 @@ class BaileysProvider extends ProviderClass {
                         `No se ha definido el numero de telefono agregalo`,
                         `Reinicia el BOT`,
                         `Tambien puedes mirar un log que se ha creado baileys.log`,
-                        `Necesitas ayuda: https://link.codigoencasa.com/DISCORD`,
-                        `(Puedes abrir un ISSUE) https://github.com/codigoencasa/bot-whatsapp/issues/new/choose`,
                     ]);
                 }
             }
