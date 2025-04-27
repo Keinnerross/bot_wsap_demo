@@ -371,20 +371,6 @@ class BaileysProvider extends ProviderClass {
         const loggerBaileys = pino({ level: 'fatal' });
         this.saveCredsGlobal = saveCreds;
 
-
-
-
-
-
-        this.store = makeInMemoryStore({ loggerBaileys });
-        this.store.readFromFile(`${NAME_DIR_SESSION}/baileys_store.json`);
-        setInterval(() => {
-            const path = `${NAME_DIR_SESSION}/baileys_store.json`;
-            if (existsSync(NAME_DIR_SESSION)) {
-                this.store.writeToFile(path);
-            }
-        }, 10_000);
-
         try {
             const sock = makeWASocket({
                 logger: loggerBaileys,
@@ -394,12 +380,13 @@ class BaileysProvider extends ProviderClass {
                     keys: makeCacheableSignalKeyStore(state.keys, loggerBaileys),
                 },
                 browser: ['Chrome (Linux)', '', ''],
-                syncFullHistory: false,
+                syncFullHistory: false, // Ya lo tienes bien
                 generateHighQualityLinkPreview: true,
-                getMessage: this.getMessage,
+                getMessage: this.getMessage, // Puedes dejarlo si quieres
             });
 
-            this.store?.bind(sock.ev);
+            // 🚫 YA NO USAMOS store ni bind
+            this.vendor = sock; // Solo guardamos el sock
 
             if (this.globalVendorArgs.usePairingCode && !sock.authState.creds.registered) {
                 if (this.globalVendorArgs.phoneNumber) {
@@ -413,89 +400,61 @@ class BaileysProvider extends ProviderClass {
                     });
                 } else {
                     this.emit('auth_failure', [
-                        `No se ha definido el numero de telefono agregalo`,
-                        `Reinicia el BOT`,
-                        `Tambien puedes mirar un log que se ha creado baileys.log`,
+                        `No se ha definido el número de teléfono, agrégalo.`,
+                        `Reinicia el BOT.`,
                     ]);
                 }
             }
 
-
-
             sock.ev.on('connection.update', async (update) => {
-
-                if (!update.qr) {
-                    if (io) {
-                        io.emit("conectado-front")
-
-                    }
-                } else {
-
-
-                    if (io) {
-                        io.emit("desconectado-front")
-                    }
-                }
-
-
                 const { connection, lastDisconnect, qr } = update;
 
-                const statusCode = lastDisconnect?.error?.output?.statusCode;
+                if (qr && !this.globalVendorArgs.usePairingCode) {
+                    console.log('🚀 Nuevo QR recibido');
+                    this.emit('require_action', {
+                        instructions: [
+                            `Debes escanear el QR Code 👌 ${this.globalVendorArgs.name}.qr.png`,
+                            `Recuerda que el QR se actualiza cada minuto.`,
+                        ],
+                    });
+                    await baileyGenerateImage(qr, `${this.globalVendorArgs.name}.qr.png`);
+                }
 
-                /** Conexion cerrada por diferentes motivos */
                 if (connection === 'close') {
-
-
+                    const statusCode = lastDisconnect?.error?.output?.statusCode;
                     if (statusCode !== DisconnectReason.loggedOut) {
-                        this.initBailey();
-                    }
-
-                    if (statusCode === DisconnectReason.loggedOut) {
+                        this.initBailey(); // Reintentar reconexión
+                    } else {
                         const PATH_BASE = join(process.cwd(), NAME_DIR_SESSION);
                         rimraf(PATH_BASE, (err) => {
-                            if (err) return
+                            if (err) return;
                         });
-
-                        this.initBailey();
+                        this.initBailey(); // Iniciar de nuevo
                     }
                 }
 
-                /** Conexion abierta correctamente */
                 if (connection === 'open') {
                     const parseNumber = `${sock?.user?.id}`.split(':').shift();
                     const host = { ...sock?.user, phone: parseNumber };
                     this.emit('ready', true);
                     this.emit('host', host);
-                    this.initBusEvents(sock);
-                }
-
-                /** QR Code */
-                if (qr && !this.globalVendorArgs.usePairingCode) {
-                    this.emit('require_action', {
-                        instructions: [
-                            `Debes escanear el QR Code 👌 ${this.globalVendorArgs.name}.qr.png`,
-                            `Recuerda que el QR se actualiza cada minuto `,
-                            `Necesitas ayuda: https://link.codigoencasa.com/DISCORD`,
-                        ],
-                    });
-                    await baileyGenerateImage(qr, `${this.globalVendorArgs.name}.qr.png`);
+                    this.initBusEvents(sock); // <-- Aquí solo necesitas eventos de mensajes nuevos
                 }
             });
 
             sock.ev.on('creds.update', async () => {
                 await saveCreds();
             });
+
         } catch (e) {
-            logger.log(e);
+            console.error(e);
             this.emit('auth_failure', [
-                `Algo inesperado ha ocurrido NO entres en pánico`,
-                `Reinicia el BOT`,
-                `Tambien puedes mirar un log que se ha creado baileys.log`,
-                `Necesitas ayuda: https://link.codigoencasa.com/DISCORD`,
-                `(Puedes abrir un ISSUE) https://github.com/codigoencasa/bot-whatsapp/issues/new/choose`,
+                `Algo inesperado ha ocurrido.`,
+                `Reinicia el BOT.`,
             ]);
         }
     }
+
 
 
     /**
