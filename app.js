@@ -4,7 +4,6 @@ const BaileysProvider = require('./myLibs/@bot-whatsapp/provider/lib/baileys/ind
 const JsonFileAdapter = require('@bot-whatsapp/database/json')
 
 
-
 const flowWelcome = require('./flows/welcome.js');
 const flowThanks = addKeyword("gracias").addAnswer("Estoy aquí para ayudarte 🦁")
 
@@ -13,8 +12,6 @@ const main = async () => {
     const adapterDB = new JsonFileAdapter()
     const adapterFlow = createFlow([flowWelcome, flowThanks])
     const adapterProvider = createProvider(BaileysProvider)
-
-
 
 
     createBot({

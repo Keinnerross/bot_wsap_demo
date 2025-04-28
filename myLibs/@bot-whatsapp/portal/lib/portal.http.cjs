@@ -70,6 +70,8 @@ const server = http.createServer((req, res) => {
     });
 });
 
+// ... (todo lo que ya tienes antes)
+
 // ---------------------- Socket.IO
 const io = socketIo(server, {
     cors: {
@@ -87,6 +89,24 @@ const qrWatchers = new Set();
 // ---------------------- Eventos Socket
 io.on('connection', async (socket) => {
     console.log('✅ Socket conectado');
+
+    // 🎯 --- NUEVO MANEJO DE ESTADO DE CONEXIÓN ---
+    socket.on('conectado-front', () => {
+        console.log('🟢 WhatsApp conectado (evento recibido)');
+        socket.emit('status-updated', { status: 'connected' });
+    });
+
+    socket.on('desconectado-front', () => {
+        console.log('🔴 WhatsApp desconectado (evento recibido)');
+        socket.emit('status-updated', { status: 'disconnected' });
+    });
+
+    socket.on('error-bailey', () => {
+        console.log('⚠️ Error con WhatsApp (evento recibido)');
+        socket.emit('status-updated', { status: 'error' });
+    });
+    // 🎯 --- FIN DE MANEJO DE CONEXIÓN ---
+
 
     const STATIC_USERNAME = process.env.STATIC_USERNAME;
     const STATIC_PASSWORD = process.env.STATIC_PASSWORD;

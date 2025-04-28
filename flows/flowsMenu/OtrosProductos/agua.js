@@ -2,20 +2,17 @@
 
 //Imports
 const { addKeyword, addAnswer } = require('@bot-whatsapp/bot');
-const menu = require('../flowsData/menuData.js');
-const db = require('../../firebase.js');
-const { pedirAnswer, pedirLogic } = require('../adicionalesFlow.js');
-const { datosEntrega, metodosPago, validacionComprobante, generarPedido } = require('../payflow.js')
-const restState = require('../utils/restState.js');
+const menu = require('../../flowsData/menuData.js');
+const db = require('../../../firebase.js');
+const { pedirAnswer, pedirLogic } = require('../../adicionalesFlow.js');
+const { datosEntrega, metodosPago, validacionComprobante, generarPedido } = require('../../payflow.js')
+const restState = require('../../utils/restState.js');
 
 //variables
-const bodyEntry = 6; // entrada del usuario, es decir, la opción que elige.
+const bodyEntry = 8; // entrada del usuario, es decir, la opción que elige.
 const menuChossed = menu[bodyEntry - 1];
 
-
-
-
-const bubolFresa = addKeyword(bodyEntry.toString()).addAnswer([`${menuChossed.producto} es una buena elección!`], null,
+const agua = addKeyword(bodyEntry.toString()).addAnswer([`Pidió un agua`], null,
     async (ctx, { flowDynamic, state }) => {
 
         const keys = ["producto", "salsas", "toppings", "extras", "cuenta"] //Valores al rest, se agregan más si es necesario
@@ -47,11 +44,4 @@ const bubolFresa = addKeyword(bodyEntry.toString()).addAnswer([`${menuChossed.pr
 
 
 
-
-
-
-
-
-module.exports = bubolFresa;
-
-
+    module.exports = agua;

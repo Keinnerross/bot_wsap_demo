@@ -3,7 +3,7 @@ const adicionales = require('./flowsData/adicionales');
 
 // Answer:
 const adicionalesAnswer = ["*Adicionales:*",
-    "¿Quieres mas salsas o toppings por un costo adicional?",
+    "¿Quieres más salsas o toppings por un costo adicional?",
     "",
     "*Salsas: $3.000*",
     ...adicionales.salsas.map((item, index) => `${index + 1} *.-* _${item.salsa}_`),
@@ -13,7 +13,7 @@ const adicionalesAnswer = ["*Adicionales:*",
     ...adicionales.toppingsClasicos.map((item, index) => `${index + 5} *.-* _${item.topping}_`),
     "",
     "*Toppings Premium: $4.000*",
-    ...adicionales.toppingsPremiums.map((item, index) => `${index + 16} *.-* _${item.topping}_`),
+    ...adicionales.toppingsPremiums.map((item, index) => `${index + 17} *.-* _${item.topping}_`),
     "",
     "0.- No gracias"
 ]
@@ -41,7 +41,7 @@ const adicionalesLogic = async (ctx, { flowDynamic, state, fallBack }) => {
     }
 
     //ctx.body <= 4 Quiere decir que eligió como adicional Toppings clasicos
-    else if (ctx.body >= 5 && ctx.body <= 15) {
+    else if (ctx.body >= 5 && ctx.body <= 16) {
         const myState = state.getMyState();
         const cuentaActual = myState.cuenta;
         const adicionalChossed = adicionales.toppingsClasicos[ctx.body - 5]; // hacemos a resta pq estamos filtrando por indice no por lenght y el usuario escribe numeros desde le 1
@@ -54,17 +54,27 @@ const adicionalesLogic = async (ctx, { flowDynamic, state, fallBack }) => {
 
 
     }
-    else if (ctx.body >= 16 && ctx.body <= 24) {
+    else if (ctx.body >= 17 && ctx.body <= 23) {
         const myState = state.getMyState();
         const cuentaActual = myState.cuenta;
-        const adicionalChossed = adicionales.toppingsPremiums[ctx.body - 16]; // hacemos a resta pq estamos filtrando por indice no por 
+        const adicionalChossed = adicionales.toppingsPremiums[ctx.body - 17]; // hacemos a resta pq estamos filtrando por indice no por 
 
 
         await state.update({ extras: adicionalChossed.topping }); // Guarda topping seleccionada
-        await state.update({ cuenta: cuentaActual + 4000 }); //Si es que la topping tiene costo extra hace la suma
+
+        const ajusteDeCuenta = (ctx)=>{
+            if (ctx == 21) return 5000; 
+            if (ctx == 22) return 5000; 
+            if (ctx == 23) return 7000;
+        }
+
+        console.log("ctx.body: " + ctx.body)
+
+        await state.update({ cuenta: cuentaActual + ajusteDeCuenta(ctx.body) }); //Si es que la topping tiene costo extra hace la suma
+    }
 
 
-    } else {
+    else {
         if (ctx.body != 0) {
             return fallBack();
         }

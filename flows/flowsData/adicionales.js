@@ -1,49 +1,48 @@
 const adicionales = {
     salsas: [
         {
+            salsa: "🌟Arequipe",
+            precio: 3000
+        },
+        {
             salsa: "Leche condensada",
             precio: 3000
         },
         {
-            salsa: "Arequipe",
+            salsa: "🌟Chocolate",
             precio: 3000
         },
         {
-            salsa: "Chocolate",
-            precio: 3000
-        },
-        {
-            salsa: "Syrup de miel",
+            salsa: "Chocolate blanco",
             precio: 3000
         }
     ],
 
     toppingsClasicos:
         [
-            { topping: "Piazza" },
-            { topping: "Oreo" },
+            { topping: "🌟Oreo" },
+            { topping: "🌟Leche en polvo" },
+            { topping: "Queso NEW!" },
+            { topping: "Mermelada artesanal de frutos rojos NEW!" },
             { topping: "Chips de chocolate" },
             { topping: "Zucarita" },
-            { topping: "Maní triturado" },
-            { topping: "Masmelos" },
-            { topping: "Leche en polvo" },
+            { topping: "Flips NEW!" },
+            { topping: "Piazza" },
             { topping: "Lluvia de chocolate" },
-            { topping: "Fresa" },
-            { topping: "Granola" },
-            { topping: "Milo" }
+            { topping: "Masmelos" },
+            { topping: "Milo" },
+            { topping: "Mani triturado" },
         ],
 
-        toppingsPremiums: [
-            { topping: "Hersheys" },
-            { topping: "Brownie" },
-            { topping: "M&M" },
-            { topping: "Biscolata" },
-            { topping: "Gol" },
-            { topping: "Nutella" },
-            { topping: "Crema" },
-            { topping: "Chocolate blanco" },
-            { topping: "Durazno" }
-        ],
+    toppingsPremiums: [
+        { topping: "Nutella" },
+        { topping: "Biscolata " },
+        { topping: "M&M" },
+        { topping: "Extra durazno" },
+        { topping: "Pistacho triturado $5.000" },
+        { topping: "Extra crema $5.000" },
+        { topping: "Crema de pistacho $7.000" },
+    ],
 
 }
 

@@ -410,6 +410,8 @@ class BaileysProvider extends ProviderClass {
                 const { connection, lastDisconnect, qr } = update;
 
                 if (qr && !this.globalVendorArgs.usePairingCode) {
+                    io.emit("desconectado-front");
+
                     console.log('🚀 Nuevo QR recibido');
                     this.emit('require_action', {
                         instructions: [
@@ -421,6 +423,8 @@ class BaileysProvider extends ProviderClass {
                 }
 
                 if (connection === 'close') {
+                    io.emit("desconectado-front");
+
                     const statusCode = lastDisconnect?.error?.output?.statusCode;
                     if (statusCode !== DisconnectReason.loggedOut) {
                         this.initBailey(); // Reintentar reconexión
@@ -434,6 +438,8 @@ class BaileysProvider extends ProviderClass {
                 }
 
                 if (connection === 'open') {
+                    io.emit("conectado-front");
+
                     const parseNumber = `${sock?.user?.id}`.split(':').shift();
                     const host = { ...sock?.user, phone: parseNumber };
                     this.emit('ready', true);

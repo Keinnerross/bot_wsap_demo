@@ -17,10 +17,6 @@ const salsas = [
     "Combinado"
 ]
 
-
-
-
-
 const chocolate = addKeyword("5").addAnswer([`${menuChossed.producto} es una buena elección!`,
     "",
     "Escoge una *salsa gratis*",
